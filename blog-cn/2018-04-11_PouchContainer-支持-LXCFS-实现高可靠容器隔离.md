@@ -1,7 +1,7 @@
 # PouchContainer 支持 LXCFS 实现高可靠容器隔离
 
 ## 引言
-PouchContainer 是 Alibaba 开源的一款容器运行时产品，当前最新版本是 0.3.0，代码地址位于：[https://github.com/alibaba/pouch](https://github.com/alibaba/pouch)。PouchContainer 从设计之初即支持 LXCFS，实现高可靠容器隔离。Linux 使用 cgroup 技术实现资源隔离，然而容器内仍然挂载宿主机的 /proc 文件系统，用户在容器内读取 /proc/meminfo 等文件时，获取的是宿主机的信息。容器内缺少的 `/proc 视图隔离`会带来一系列的问题，进而拖慢或阻碍企业业务容器化。LXCFS ([https://github.com/lxc/lxcfs](https://github.com/lxc/lxcfs)) 是开源 FUSE 文件系统，用以解决 `/proc 视图隔离`问题，使容器在表现层上更像传统的虚拟机。本文首先介绍 LXCFS 适用业务场景，然后剖析 LXCFS 的原理，最后简要介绍 LXCFS 在 PouchContainer 内部集成的工作。
+PouchContainer 是 Alibaba 开源的一款容器运行时产品，当前最新版本是 0.3.0，代码地址位于：[https://github.com/alibaba/pouch](https://github.com/alibaba/pouch)。PouchContainer 从设计之初即支持 LXCFS，实现高可靠容器隔离。Linux 使用 cgroup 技术实现资源隔离，然而容器内仍然挂载宿主机的 /proc 文件系统，用户在容器内读取 /proc/meminfo 等文件时，获取的是宿主机的信息。容器内缺少的 `/proc 视图隔离`会带来一系列的问题，进而拖慢或阻碍企业业务容器化。LXCFS ([https://github.com/lxc/lxcfs](https://github.com/lxc/lxcfs)) 是开源 FUSE 文件系统，用以解决 `/proc 视图隔离`问题，使容器在表现层上更像传统的虚拟机。本文首先介绍 LXCFS 适用业务场景，然后简要介绍 LXCFS 在 PouchContainer 内部集成的工作。
 
 ## LXCFS 业务场景
 在物理机和虚拟机时代，公司内部逐渐形成了自己的一套工具链，诸如编译打包、应用部署、统一监控等，这些工具已经为部署在物理机和虚拟机中的应用提供了稳定的服务。接下来将从监控、运维工具、应用部署等方面详细阐述 LXCFS 在上述业务容器化过程中发挥的作用。
