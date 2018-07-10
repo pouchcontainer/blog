@@ -7,7 +7,6 @@
 - [PouchContainer配置](#pouchcontainer-配置)
   - [VirtualBox下载地址](#virtualbox-下载地址)
   - [钉盘地址](#钉盘地址)
-  - [镜像下载](#镜像下载)
 
 ## 安装 Golang
 
@@ -67,7 +66,7 @@ VS Code Download: <https://code.visualstudio.com/download>
       <https://space.dingtalk.com/s/gwHOABmLzwLOGlgkPQPaACBhNzNjYjI5NTYxMzQ0NmUwOWRmMTFlN2UzMTYxNDQ4Mw>   
       密码: V7ms
  
-### 镜像下载
+  镜像下载
   https://space.dingtalk.com/s/gwHOABmslALOGlgkPQPaACAwNTg4YTBjOGI4OTI0MGQ5YjE5MDgyYWFjMzAxMDY1MQ   
   密码: tkD3 
 

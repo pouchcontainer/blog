@@ -2,12 +2,11 @@
 
 ## Main Links
 
-- [Install Golang](#Install-Golang)
-- [Install VS Code](#Install-VS-Code)
-- [PouchContainer Setup](#PouchContainer-Setup)
-  - [VirtualBox Downloads](#VirtualBox-Downloads)
-  - [DingPan link](#DingPan link)
-  - [Download the virtual machine backup of the development environment](#Download the virtual machine backup of the development environment)
+- [Install Golang](#install-golang)
+- [Install VS Code](#install-vs-code)
+- [PouchContainer Setup](#pouchcontainer-setup)
+  - [VirtualBox Downloads](#virtualbox-downloads)
+  - [DingPan link](#dingPan-link)
 
 ## Install Golang
 
@@ -68,7 +67,7 @@ PouchContainer is an enterprise-class container solution, it only supports the L
       <https://space.dingtalk.com/s/gwHOABmLzwLOGlgkPQPaACBhNzNjYjI5NTYxMzQ0NmUwOWRmMTFlN2UzMTYxNDQ4Mw>   
       password: V7ms
  
-### Download the virtual machine backup of the development environment
+  Download the virtual machine backup of the development environment
   https://space.dingtalk.com/s/gwHOABmslALOGlgkPQPaACAwNTg4YTBjOGI4OTI0MGQ5YjE5MDgyYWFjMzAxMDY1MQ   
   paddword: tkD3 
 
