@@ -2,11 +2,11 @@
 
 ## Main Links
 
-- [Install Golang](#Install&nbsp;Golang)
-- [Install VS Code](#Install&nbsp;VS&nbsp;Code)
-- [PouchContainer Setup](#PouchContainer&nbsp;Setup)
-  - [VirtualBox Downloads](#VirtualBox&nbsp;Downloads)
-  - [DingPan link](#DingPan&nbsp;link)
+- [Install Golang](#Install-Golang)
+- [Install VS Code](#Install-VS-Code)
+- [PouchContainer Setup](#PouchContainer-Setup)
+  - [VirtualBox Downloads](#VirtualBox-Downloads)
+  - [DingPan link](#DingPan link)
   - [Download the virtual machine backup of the development environment](#Download the virtual machine backup of the development environment)
 
 ## Install Golang
