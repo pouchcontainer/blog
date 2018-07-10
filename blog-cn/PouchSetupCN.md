@@ -54,11 +54,10 @@ VS Code Download: <https://code.visualstudio.com/download>
 
 由于PouchContainer是企业级容器方案，故其只支持Linux操作系统，如果是其它操作系统的用户需要使用虚拟机才能做到本地运行和测试。请依照以下步骤进行环境搭建。 
  
-### VirtualBox 下载地址
+### VirtualBox 下载
   <https://www.virtualbox.org/wiki/Downloads>  
   MacOS,  Windows 用户可以下载对应的地址
-
-### 钉盘地址
+  钉盘地址
   - Mac
       <https://space.dingtalk.com/s/gwHOABma4QLOGlgkPQPaACBiMzk5ZWRjZTAyOGI0MTBkOGRkNTRjYzNkN2Q1NTFjOA>   
       密码: p5Sb
