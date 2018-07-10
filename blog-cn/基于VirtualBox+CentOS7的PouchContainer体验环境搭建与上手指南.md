@@ -6,14 +6,14 @@
 
 **2. 在钉盘上下载 VirtualBox**
 
-- Mac 版本地址: https://space.dingtalk.com/s/gwHOABma4QLOGlgkPQPaACBiMzk5ZWRjZTAyO GI0MTBkOGRkNTRjYzNkN2Q1NTFjOA 密码: p5Sb 
-- Windows 版本地址: https://space.dingtalk.com/s/gwHOABmLzwLOGlgkPQPaACBhNzNjYjI5NTYxM zQ0NmUwOWRmMTFlN2UzMTYxNDQ4Mw 密码: V7ms 
+- Mac 版本地址: https://space.dingtalk.com/s/gwHOABma4QLOGlgkPQPaACBiMzk5ZWRjZTAyOGI0MTBkOGRkNTRjYzNkN2Q1NTFjOA
+- Windows 版本地址: https://space.dingtalk.com/s/gwHOABmLzwLOGlgkPQPaACBhNzNjYjI5NTYxMzQ0NmUwOWRmMTFlN2UzMTYxNDQ4Mw
 
 ## 配置虚拟机
 
 **1. 下载开发环境的虚拟机备份，钉盘地址:** 
 
-https://space.dingtalk.com/s/gwHOABmLxALOGlgkPQPaACA4N2JjNmIwMGI5N WU0MGE1YjZhNTBiOGNjMDZhOTJiNQ 密码: pLgb 
+https://space.dingtalk.com/s/gwHOABmLxALOGlgkPQPaACA4N2JjNmIwMGI5NWU0MGE1YjZhNTBiOGNjMDZhOTJiNQ
 
 **2. 打开 VirtualBox**
 
@@ -29,7 +29,7 @@ https://space.dingtalk.com/s/gwHOABmLxALOGlgkPQPaACA4N2JjNmIwMGI5N WU0MGE1YjZhNT
 
 <img src="https://cdn.yuque.com/lark/0/2018/png/72820/1531142341940-d29a6743-c8e5-4581-adda-4e4f1149f1d2.png" width="450px" height="300px" />
 
-**3. 启动新建实例，等待进入到登录阶段，用户名 `root`，密码 `Ali88Baiji `**
+**3. 启动新建实例，等待进入到登录阶段，用户名 `root`**
 
 <img src="https://cdn.yuque.com/lark/0/2018/png/72820/1531142322664-3227342d-fa41-48b3-834e-3aa46b8446a2.png" width="700px" height="150px" />
 

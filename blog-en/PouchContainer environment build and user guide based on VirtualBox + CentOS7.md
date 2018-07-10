@@ -6,12 +6,12 @@
 
 **2. Download VirtualBox from DingPan**
 
-- Mac  Version Address: https://space.dingtalk.com/s/gwHOABma4QLOGlgkPQPaACBiMzk5ZWRjZTAyO GI0MTBkOGRkNTRjYzNkN2Q1NTFjOA  Password: p5Sb 
-- Windows Version Address: https://space.dingtalk.com/s/gwHOABmLzwLOGlgkPQPaACBhNzNjYjI5NTYxM zQ0NmUwOWRmMTFlN2UzMTYxNDQ4Mw Password: V7ms 
+- Mac  Version Address: https://space.dingtalk.com/s/gwHOABma4QLOGlgkPQPaACBiMzk5ZWRjZTAyOGI0MTBkOGRkNTRjYzNkN2Q1NTFjOA
+- Windows Version Address: https://space.dingtalk.com/s/gwHOABmLzwLOGlgkPQPaACBhNzNjYjI5NTYxMzQ0NmUwOWRmMTFlN2UzMTYxNDQ4Mw
 
 ## Configuring Virtual Machine
 
-**1. Download the virtual machine backup of the development environment，DingPan Address: https://space.dingtalk.com/s/gwHOABmLxALOGlgkPQPaACA4N2JjNmIwMGI5N WU0MGE1YjZhNTBiOGNjMDZhOTJiNQ Password: pLgb**
+**1. Download the virtual machine backup of the development environment，DingPan Address: https://space.dingtalk.com/s/gwHOABmLxALOGlgkPQPaACA4N2JjNmIwMGI5NWU0MGE1YjZhNTBiOGNjMDZhOTJiNQ**
 
 **2. Open VirtualBox**
 
@@ -27,7 +27,7 @@
 
 <img src="https://cdn.yuque.com/lark/0/2018/png/72820/1531142341940-d29a6743-c8e5-4581-adda-4e4f1149f1d2.png" width="450px" height="300px" />
 
-**3. Start new instanse，waiting to enter the login stage，Username: `root`，Password:`Ali88Baiji `**
+**3. Start new instanse，waiting to enter the login stage，Username: `root`**
 
 <img src="https://cdn.yuque.com/lark/0/2018/png/72820/1531142322664-3227342d-fa41-48b3-834e-3aa46b8446a2.png" width="700px" height="150px" />
 
