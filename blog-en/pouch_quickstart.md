@@ -125,13 +125,13 @@ run:    ```yum install git```
 
     ``` yum install -y yum-utils```
 
-13. Add pouch and update
+13. Add pouch repository and update
 
     ``` yum-config-manager --add-repo http://mirrors.aliyun.com/opsx/opsx-centos7.repo ```
 
     ``` yum update```
 
-14. Download pouch from mirror of Aliyun 从阿里云的镜像就可以顺利下载pouch服务了
+14. Download pouch from mirror of Aliyun
 
     ``` yum install pouch```
 
@@ -143,7 +143,7 @@ run:    ```yum install git```
 
 17. Successful startup
 
-## 开发环境搭建
+## Development environment
 
 In the previous step, we have already built the environment and settings, such as go & git, then you can prepare the solution as follow tips:
 
