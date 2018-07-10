@@ -1,4 +1,4 @@
-[原英文文档](#https://github.com/alibaba/pouch/blob/master/CONTRIBUTING.md)
+[原英文文档](https://github.com/alibaba/pouch/blob/master/CONTRIBUTING.md)
 
 # 为PouchContainer做出贡献
 
