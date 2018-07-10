@@ -85,7 +85,7 @@ pouch run -t -d busybox sh
 
 登录该基础容器：
 ``` bash
-pouchexec -it {ID} sh
+pouch exec -it {ID} sh
 // ID 为上图中串码的前6位，在本示例中 ID = 67430c
 // 指令为 pouchexec -it 67430c sh
 ```
