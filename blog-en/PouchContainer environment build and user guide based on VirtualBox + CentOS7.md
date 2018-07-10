@@ -31,7 +31,7 @@
 
 <img src="https://cdn.yuque.com/lark/0/2018/png/72820/1531142322664-3227342d-fa41-48b3-834e-3aa46b8446a2.png" width="700px" height="150px" />
 
-**4. modify `/etc/sysconfig/network-scripts/ifcfg-eth0`，make the HWADDR match the MAC address displayed across the ip ad command，reboot , then  ping www.alibaba-inc.com，check if the network is work**
+**4. modify `/etc/sysconfig/network-scripts/ifcfg-eth0`，make the HWADDR match the MAC address displayed across the ip ad command，reboot , then  ping www.alibaba-inc.com, check if the network is work**
 
 - show MAC address across the ip ad command
 

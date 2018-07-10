@@ -43,7 +43,7 @@ https://space.dingtalk.com/s/gwHOABmLxALOGlgkPQPaACA4N2JjNmIwMGI5N WU0MGE1YjZhNT
 
 <img src="https://cdn.yuque.com/lark/0/2018/png/72820/1531142305340-0966e48f-2bdc-492a-8277-791a92c62e0f.png" width="700px" height="130px" />
 
-- ping www.alibaba-inc.com,检查网络连接
+- ping www.alibaba-inc.com，检查网络连接
 
 <img src="https://cdn.yuque.com/lark/0/2018/png/72820/1531142294988-03c54bb0-6778-4fb1-b149-9f5fa3e1122e.png" width="700px" height="200px" />
 
@@ -73,7 +73,7 @@ https://space.dingtalk.com/s/gwHOABmLxALOGlgkPQPaACA4N2JjNmIwMGI5N WU0MGE1YjZhNT
 
 <img src="https://cdn.yuque.com/lark/0/2018/png/72820/1531142232272-1d4b4cb6-623a-4336-8b41-e8568458814d.png" width="450px" height="300px" />
 
-**5. 在宿主机中通过iterm连接虚拟机**
+**5. 在宿主机中通过iTerm连接虚拟机**
 
  <img src="https://cdn.yuque.com/lark/0/2018/png/72820/1531143146304-720f9ef3-1031-4b73-aa60-250c44c41c26.png" width="700px" height="150px" />
 
