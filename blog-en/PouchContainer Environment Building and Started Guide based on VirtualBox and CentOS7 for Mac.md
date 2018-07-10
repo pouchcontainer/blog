@@ -9,61 +9,58 @@ This article is mainly to guide for container developers to build pouch containe
 ***1.Create virtual host.***
 Click "new" button to Create Virtual host and input name,typically it will automatically load the corresponding type and version.
 
-![aeaf473194bf3e9f.png](file:///Users/wangzhen/Desktop/images/aeaf473194bf3e9f.png)
+<img width="630" height="430" src="https://img.alicdn.com/tfs/TB13Q5qDACWBuNjy0FaXXXUlXXa-1218-902.jpg"/>
 
 ***2.Set memory size.***
 The memory size can be set based on the memory size of the machine itself and the actual situation of the number of virtual hosts installed on the VirtualBox virtual machine, where I set it to 1024M.
 
-![a4c952a5b884497a.png](file:///Users/wangzhen/Desktop/images/a4c952a5b884497a.png)
+<img width="630" height="430" src="https://img.alicdn.com/tfs/TB1WOXlDpGWBuNjy0FbXXb4sXXa-1278-882.jpg"/>
 
 ***3.Set virtual hard disk file type, distribute disk size, file postion and file size and then click next.***
 
-![a9d55b3edc916ac8.png](file:///Users/wangzhen/Desktop/images/a9d55b3edc916ac8.png)
+<img width="630" height="430" src="https://img.alicdn.com/tfs/TB1.KieDxGYBuNjy0FnXXX5lpXa-1492-856.png"/>
 
 ***4.Set virtual host.***
 
 Select the virtual host that you want to set and click "setting","system","Main bord" in turn. In the startup sequence item, select the "floppy disk", point the right button , put "" floppy disk" "in the last of the startup sequence. Then click ok.
 
-![d6e893987a366a3a.png](file:///Users/wangzhen/Desktop/images/d6e893987a366a3a.png)
+<img width="630" height="430" src="https://img.alicdn.com/tfs/TB15TdDDv9TBuNjy0FcXXbeiFXa-1740-996.png"/>
 
 Then, click "Memory", select "no disk" and click the optical disc icon on the right, click "select a virtual disc", and then select the image file of centos in the popup file selection window.
 
-![db326af7e17837e5.png](file:///Users/wangzhen/Desktop/images/db326af7e17837e5.png)
+<img width="630" height="430" src="https://img.alicdn.com/tfs/TB1WYR6DuSSBuNjy0FlXXbBpVXa-1732-800.png"/>
 
-![b660692ec386c082.png](file:///Users/wangzhen/Desktop/images/b660692ec386c082.png)
+<img width="630" height="430" src="https://img.alicdn.com/tfs/TB1tR9LDrSYBuNjSspfXXcZCpXa-1318-728.png"/>
 
 ***5.Boot virtual host.***
 
 Select the virtual host and click "start".
 
-![0b36cd107adb5a30.png](file:///Users/wangzhen/Desktop/images/0b36cd107adb5a30.png)
-
-![7b0d893bb42fa8a7.png](file:///Users/wangzhen/Desktop/images/7b0d893bb42fa8a7.png)
+<img width="630" height="430" src="https://img.alicdn.com/tfs/TB1XumeDxGYBuNjy0FnXXX5lpXa-1388-1244.png"/>
 
 Set the language.
 
-![c93d5305d2203ec4.png](file:///Users/wangzhen/Desktop/images/c93d5305d2203ec4.png)
+<img width="630" height="430" src="https://img.alicdn.com/tfs/TB1xKxcDrGYBuNjy0FoXXciBFXa-2042-1608.png"/>
 
 Set Date & Time and INSTALLATION DESTINATION.
 
-![7697c5f14891e121.png](file:///Users/wangzhen/Desktop/images/7697c5f14891e121.png)
+<img width="630" height="430" src="https://img.alicdn.com/tfs/TB1mvdtvgKTBuNkSne1XXaJoXXa-2038-1420.png"/>
 
-![a3bddae5aa12791a.png](file:///Users/wangzhen/Desktop/images/a3bddae5aa12791a.png)
+<img width="630" height="430" src="https://img.alicdn.com/tfs/TB1V_4lDwmTBuNjy1XbXXaMrVXa-2038-1308.jpg"/>
 
-![b19f45f438b6318d.png](file:///Users/wangzhen/Desktop/images/b19f45f438b6318d.png)
 
 Set Root password and click "reboot" after configuration.
 
-![c96302fbcb5ddf4a.png](file:///Users/wangzhen/Desktop/images/c96302fbcb5ddf4a.png)
+<img width="630" height="430" src="https://img.alicdn.com/tfs/TB17axjDpOWBuNjy0FiXXXFxVXa-2038-1568.png"/>
 
 After the virtual machine reboot, login through the password you set just now.
 
-![f097f2f9403bd0e2.png](file:///Users/wangzhen/Desktop/images/f097f2f9403bd0e2.png)
+<img width="630" height="430" src="https://img.alicdn.com/tfs/TB1yutcDrGYBuNjy0FoXXciBFXa-1440-886.png"/>
 
 ***6.Set dynamic ip address***
 The above mentioned steps guide us to install CentOS in Virtual Box. However, there are nothing to show about ip information when we input **"ip addr"**.
 
-![577e9c28b4190d90.png](file:///Users/wangzhen/Desktop/images/577e9c28b4190d90.png)
+<img width="630" height="430" src="https://img.alicdn.com/tfs/TB148NkDuSSBuNjy0FlXXbBpVXa-1440-886.png"/>
 
 Input command:
 ```bash
@@ -75,27 +72,30 @@ vi ifcfg-en0s3
 ```
 to check and edit network configuration information.
 
-![807dedc2cc2e0df5.png](file:///Users/wangzhen/Desktop/images/807dedc2cc2e0df5.png)
+<img width="630" height="430" src="https://img.alicdn.com/tfs/TB1F1ieDxGYBuNjy0FnXXX5lpXa-1440-886.png"/>
 
-Here, change the ONBOOT=no to ONBOOT=yes and input **:wq** to save and exit.
+Here, change the ONBOOT=no to ONBOOT=yes and input `:wq` to save and exit.
 
-![b297b4862794bacc.png](file:///Users/wangzhen/Desktop/images/b297b4862794bacc.png)
+<img width="630" height="430" src="https://img.alicdn.com/tfs/TB1V7aODv1TBuNjy0FjXXajyXXa-1440-886.png"/>
 
 Input
 ```bash
 service network restart
 ```
-to restart network and input **"ip addr"** again, here we are able to see the dynamic ip address.
+to restart network and input `ip addr` again, here we are able to see the dynamic ip address.
 
-![e89b59c654f8b531.png](file:///Users/wangzhen/Desktop/images/e89b59c654f8b531.png)
+<img width="630" height="430" src="https://img.alicdn.com/tfs/TB1eDhDDv9TBuNjy0FcXXbeiFXa-2068-1274.png"/>
 
 ## Install PouchContainer
 
 **1.Install yum-utils**
 
 To install PouchContainer, you need a maintained version of CentOS 7. WE are able to install PouchContainer through Aliyun mirrors. If you install PouchContainer for the first on a new host machine, you need to set up the PouchContainer repository. Then, you can install and update PouchContainer from repository.
+``` bash
+sudo yum install -y yum-utils
+```
 
-![179f3ea59193aaf6.png](file:///Users/wangzhen/Desktop/images/179f3ea59193aaf6.png)
+<img width="630" height="430" src="https://img.alicdn.com/tfs/TB1mpY2DqmWBuNjy1XaXXXCbXXa-1440-886.png"/>
 
 **2.Set up the PouchContainer repository**
 
@@ -105,9 +105,9 @@ Use the following command to add PouchContainer repository.
 sudo yum-config-manager --add-repo http://mirrors.aliyun.com/opsx/opsx-centos7.repo
 sudo yum update
 ```
-![f20c286ef86aaeb8.png](file:///Users/wangzhen/Desktop/images/f20c286ef86aaeb8.png)
+<img width="630" height="430" src="https://img.alicdn.com/tfs/TB1c5NPDuOSBuNjy0FdXXbDnVXa-1440-886.png"/>
 
-![6d3bd70ad2a08363.png](file:///Users/wangzhen/Desktop/images/6d3bd70ad2a08363.png)
+<img width="630" height="430" src="https://img.alicdn.com/tfs/TB1nptADv9TBuNjy0FcXXbeiFXa-1440-886.png"/>
 
 **3. Install PouchContainer**
 
@@ -115,7 +115,7 @@ Run the following command to install the latest version of PouchContainer.
 ```bash
 sudo yum install pouch
 ```
-![c64eb6093ec833fc.png](file:///Users/wangzhen/Desktop/images/c64eb6093ec833fc.png)
+<img width="630" height="430" src="https://img.alicdn.com/tfs/TB1nptADv9TBuNjy0FcXXbeiFXa-1440-886.png"/>
 
 ##Run an pouchContainer instantiation
 
@@ -127,8 +127,11 @@ sudo systemctl start pouch
 ```
 
 **2.Load a iso file to boot a pouchcontainer instantiation**
+```bash
+pouch pull busybox
+```
 
-![73447fee431f185b.png](file:///Users/wangzhen/Desktop/images/73447fee431f185b.png)
+<img width="630" height="430" src="https://img.alicdn.com/tfs/TB1LuHGDDtYBeNjy1XdXXXXyVXa-1440-886.png"/>
 
 **3.Start a busybox container**
 
@@ -137,7 +140,7 @@ Run the fllowing command to start a busybox base container.
 pouch run -t -d busybox sh
 ```
 
-![bb88a6c9c8746545.png](file:///Users/wangzhen/Desktop/images/bb88a6c9c8746545.png)
+<img width="630" height="430" src="https://img.alicdn.com/tfs/TB1wuHGDDtYBeNjy1XdXXXXyVXa-1440-886.png"/>
 
 **4.Login container**
 
@@ -147,11 +150,11 @@ pouch exec -it {ID} sh
 ```
 to login container, the ID is the first six byte of the previous output ID.
 
-![3f5d3aa64cff67a2.png](file:///Users/wangzhen/Desktop/images/3f5d3aa64cff67a2.png)
+<img width="630" height="430" src="https://img.alicdn.com/tfs/TB1miBlDuuSBuNjy1XcXXcYjFXa-1440-886.png"/>
 
 After login, it shows like below:
 
-![a6be140f51ca5857.png](file:///Users/wangzhen/Desktop/images/a6be140f51ca5857.png)
+<img width="630" height="430" src="https://img.alicdn.com/tfs/TB1WyxlDuuSBuNjy1XcXXcYjFXa-1440-886.png"/>
 
 ## Congratulation
 
