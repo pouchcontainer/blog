@@ -2,10 +2,10 @@
 
 ## 链接
 
-- [安装 Golang](#安装-Golang)
-- [安装 VS Code](#安装-VS-Code)
-- [PouchContainer配置](#PouchContainer-配置)
-  - [VirtualBox下载地址](#VirtualBox-下载地址)
+- [安装 Golang](#安装-golang)
+- [安装 VS Code](#安装-vs-code)
+- [PouchContainer配置](#pouchcontainer-配置)
+  - [VirtualBox下载地址](#virtualbox-下载地址)
   - [钉盘地址](#钉盘地址)
   - [镜像下载](#镜像下载)
 
