@@ -12,35 +12,35 @@
 
 - 新建目录
 
-  `mkdir $HOME/Go`
+  `$ mkdir $HOME/Go`
   
-  `mkdir $HOME/Go`
+  `$ mkdir $HOME/Go`
   
-  `mkdir -p $HOME/Go/src/github.com/user`
+  `$ mkdir -p $HOME/Go/src/github.com/user`
 
  
 
 - 配置路径
 
-  `export GOPATH=$HOME/Go`
+  `$ export GOPATH=$HOME/Go`
   
-  `export GOROOT=/usr/local/opt/go/libexec`
+  `$ export GOROOT=/usr/local/opt/go/libexec`
   
-  `export PATH=$PATH:$GOPATH/bin`
+  `$ export PATH=$PATH:$GOPATH/bin`
   
-  `export PATH=$PATH:$GOROOT/bin`
+  `$ export PATH=$PATH:$GOROOT/bin`
 
  
 
 - 安装GO
 
-  `brew install go`
+  `$ brew install go`
 
  
 
 - 获取GO
 
-  `go get golang.org/x/tools/cmd/godoc`
+  `$ go get golang.org/x/tools/cmd/godoc`
 
  
 
@@ -69,12 +69,12 @@ VS Code Download: <https://code.visualstudio.com/download>
   https://space.dingtalk.com/s/gwHOABmslALOGlgkPQPaACAwNTg4YTBjOGI4OTI0MGQ5YjE5MDgyYWFjMzAxMDY1MQ   
   密码: tkD3 
 
-  打开VirtualBox，新建-名称自定义-类型选择【Linux】-版本选择【Red Hat(64-bit)】
+  打开VirtualBox，新建-名称自定义-类型选择[Linux]-版本选择[Red Hat(64-bit)]
 
   <img src="https://img.alicdn.com/tfs/TB1zfYLDv1TBuNjy0FjXXajyXXa-939-687.png" alt="Picture1" width="70%" >
  
 
-  继续-内存选择【1024M】-继续-使用【已有的虚拟硬盘文件】-选择步骤C中下载的vdi文件-创建
+  继续-内存选择[1024M]-继续-使用[已有的虚拟硬盘文件]-选择步骤C中下载的vdi文件-创建
 
   <img src="https://img.alicdn.com/tfs/TB153GfDpOWBuNjy0FiXXXFxVXa-939-558.png" alt="Picture2" width="70%" >
  
@@ -116,4 +116,4 @@ VS Code Download: <https://code.visualstudio.com/download>
 
   <img src="https://img.alicdn.com/tfs/TB1_G6bDxGYBuNjy0FnXXX5lpXa-939-75.png" alt="Picture8" width="70%" >
 
-  现在你已经成功启动了Pouch容器服务.
+  现在你已经成功启动了Pouch容器服务。

@@ -12,35 +12,35 @@
 
 - Create Directories
 
-  `mkdir $HOME/Go`
+  `$ mkdir $HOME/Go`
   
-  `mkdir $HOME/Go`
+  `$ mkdir $HOME/Go`
   
-  `mkdir -p $HOME/Go/src/github.com/user`
+  `$ mkdir -p $HOME/Go/src/github.com/user`
 
  
 
 - Setup your paths
 
-  `export GOPATH=$HOME/Go`
+  `$ export GOPATH=$HOME/Go`
   
-  `export GOROOT=/usr/local/opt/go/libexec`
+  `$ export GOROOT=/usr/local/opt/go/libexec`
   
-  `export PATH=$PATH:$GOPATH/bin`
+  `$ export PATH=$PATH:$GOPATH/bin`
   
-  `export PATH=$PATH:$GOROOT/bin`
+  `$ export PATH=$PATH:$GOROOT/bin`
 
  
 
 - Install Go
 
-  `brew install go`
+  `$ brew install go`
 
  
 
 - "go get" the basics
 
-  `go get golang.org/x/tools/cmd/godoc`
+  `$ go get golang.org/x/tools/cmd/godoc`
 
  
 
@@ -81,7 +81,7 @@ PouchContainer is an enterprise-class container solution, it only supports the L
   <img src="https://img.alicdn.com/tfs/TB153GfDpOWBuNjy0FiXXXFxVXa-939-558.png" alt="Picture2" width="70%" >
  
 
-  Click continue. Use the virtual disk file download in the last step. The CentOS.vdi file. Click “Create” to create a new instance. Start the new instance, login with users: root, password: Ali88Baiji
+  Click continue. Use the virtual disk file download in the last step. The CentOS.vdi file. Click "Create" to create a new instance. Start the new instance, login with users: root, password: Ali88Baiji
 
   <img src="https://img.alicdn.com/tfs/TB1afqRDuySBuNjy1zdXXXPxFXa-939-552.png" alt="Picture3" width="70%" >
 
