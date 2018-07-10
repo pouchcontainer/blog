@@ -12,4 +12,5 @@ Index: CRI gRPC changelog -> gRPC API changelog
 8. kubernetes -> Kubernetes
 9. Introduction of kubernetes and PouchContainer -> 全文都在讲PouchContainer的介绍，此处是否应该指代PouchContainer中的Kubernetes，或者PouchContainer与Kubernetes的关系？[建议：kubernetes elements in PouchContainer？ or PouchContainer with CRI] 
 10. architecture of it, or more pic about PouchContainer. : pic -> pics
+11. Static files contains ... -> Static files contain
 
