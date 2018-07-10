@@ -65,7 +65,7 @@ sudo yum install pouch
 ```
 该命令自动安装最新版本PouchContainer，在首次安装时您会收到接受`GPG key`的提示，`key`的秘钥指纹会显示供您参考。
 ## 3.在虚拟机环境中开启一个PouchContainer的实例
-本小节主要内容为在一个新安装好的虚拟机环境中开启一个PouchContainer的实例，供验证环境是否安装成功。首先执行命令启动PouchContainer：
+本小节主要内容为在一个新安装好的虚拟机环境中开启一个PouchContainer的实例，供验证环境是否安装成功。首先执行命令启动PouchContainer：
 ``` bash
 sudo systemctl start pouch
 ```
