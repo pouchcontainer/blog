@@ -7,7 +7,9 @@ In this part , it will guide you to download PouchContainer files step by step. 
 ## 1. Fork repo from github source 
 Visit [https://github.com/alibaba/pouch](https://github.com/alibaba/pouch)and sign in your personal github, click 'Fork' button at the upper right corner.<br>
 
-<div align="center">![enter description here](https://github.com/billhcz/blog/blob/1a9ce3711a7e3d89fe34ab73de7fd12f65498137/img/1.2-1.png)</div><br>
+<div align="center">
+    <img src="https://github.com/billhcz/blog/blob/1a9ce3711a7e3d89fe34ab73de7fd12f65498137/img/1.2-1.png" width="200px">
+</div><br>
 
 ## 2. Download repo
 ### 2.1 Download by git command
