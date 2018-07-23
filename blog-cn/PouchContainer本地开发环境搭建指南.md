@@ -111,7 +111,9 @@ ping www.alibaba-inc.com，检查网络是否正常
 ##### 创建基础容器并登录
 执行pouch run -t -d busybox sh启动一个busybox基础容器
 执行pouch exec -it {ID} sh登入启动的容器，其中ID是上条命令输出的完整ID中的前六位,即可进入容器。
+
 ![Alt text](https://github.com/ProgrammingK/blog/blob/master/image/20180723225507.png)
+
 ###### ***注意*** 
 该镜像中的pouch目录是直接clone了alibaba/pouch中的repo，无法直接在该目录中开发提交，此环境为上手体验环境，开发环境配置请看后一节。
 
@@ -132,7 +134,7 @@ sudo apt install nfs-common
 sudo apt install cifs-utils
 sudo apt install virtualbox-guest-utils
 ```
-
+
 安装插件后仍提示异常：“no such devive......” 运行指令：
 ```shell
 modprobe -a vboxguest vboxsf vboxvideo
