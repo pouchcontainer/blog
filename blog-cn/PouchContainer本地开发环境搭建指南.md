@@ -119,10 +119,11 @@ ping www.alibaba-inc.com，检查网络是否正常
 
 ## VritualBox设置共享文件夹
 
-##### 1、设置共享文件夹
+##### 1、设置共享文件夹
 在VirtualBox工具页面选择：设置=>共享文件夹；选择本地代码文件夹，设置共享文件夹的名称
 ![Alt text](https://github.com/ProgrammingK/blog/blob/master/image/20180723214620.png)
-设置共享文件夹后，重启虚拟机
+
+设置共享文件夹后，重启虚拟机
 ##### 2、挂载共享文件夹到目标目录下
 使用指令：
 ```shell
@@ -139,6 +140,6 @@ sudo apt install virtualbox-guest-utils
 ```shell
 modprobe -a vboxguest vboxsf vboxvideo
 ```
-可参考VirtualBox文档：https://wiki.archlinux.org/index.php/VirtualBox_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
-##### 3、测试挂载成功
-在宿主机上的代码文件夹中增加一个代码无害的测试文件，在虚拟集中打开挂载的目标文件夹，在其中看到目标文件，挂载成功。
+可参考VirtualBox文档：https://wiki.archlinux.org/index.php/VirtualBox_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+##### 3、测试挂载成功
+在宿主机上的代码文件夹中增加一个代码无害的测试文件，在虚拟集中打开挂载的目标文件夹，在其中看到目标文件，挂载成功。
