@@ -13,7 +13,10 @@ Visit [https://github.com/alibaba/pouch](https://github.com/alibaba/pouch)and si
 ### 2.1 Download by git command
 Click 'Clone or download' and copy the url which will be used in the git command.<br>
 
-![enter description here](https://github.com/billhcz/blog/blob/1a9ce3711a7e3d89fe34ab73de7fd12f65498137/img/1.2-2.png)<br>
+<div align="center">
+<img src="https://github.com/billhcz/blog/blob/1a9ce3711a7e3d89fe34ab73de7fd12f65498137/img/1.2-2.png" width="400px">
+</div>
+<br>
 
 Open terminal in mac, choose object folder by 'cd' command and input:
 
@@ -22,7 +25,11 @@ git clone https://github.com/alibaba/pouch.git
 ```
 ## 2.2 download by ZIP files
 This is a easier way to download.on your github click 'Download ZIP'.<br>
-![enter description here](https://github.com/billhcz/blog/blob/1a9ce3711a7e3d89fe34ab73de7fd12f65498137/img/1.2-3.png)<br>
+
+<div align="center">
+<img src="https://github.com/billhcz/blog/blob/1a9ce3711a7e3d89fe34ab73de7fd12f65498137/img/1.2-3.png" width="400px">
+</div>
+<br>
 
 Unzip the the downloaded zip file in your object folder which will be shared to the Ubuntu.
 
