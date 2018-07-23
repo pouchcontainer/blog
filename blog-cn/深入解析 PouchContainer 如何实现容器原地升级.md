@@ -45,7 +45,7 @@ PouchContainer 底层对接的是 Containerd v1.0.3 ，对比 Moby，在容器�
 ## Upgrade 功能具体实现
 ### Upgrade API 定义
 
-首先说明一下 `upgrade`  API 入口层定义，用于定义升级操作可以对容器的哪些参数进行修改。如下 `ContainerUpgradeConfig` 的定义，容器升级操作可以对容器 `ContainerConfig` 和 `HostConfig` 都可以进行操作，如果在 PouchContainer github 代码仓库的 `apis/types` 目录下参看这两个参数的定义，可以发现实际上，`upgrade` 操作可以修改旧容器的__所有__相关配置。 
+首先说明一下 `upgrade`  API 入口层定义，用于定义升级操作可以对容器的哪些参数进行修改。如下 `ContainerUpgradeConfig` 的定义，容器升级操作可以对容器 `ContainerConfig` 和 `HostConfig` 都可以进行操作，如果在 PouchContainer github 代码仓库的 `apis/types` 目录下参看这两个参数的定义，可以发现实际上，`upgrade` 操作可以修改旧容器的 __所有__ 相关配置。 
 ```go
 // ContainerUpgradeConfig ContainerUpgradeConfig is used for API "POST /containers/upgrade".
 // It wraps all kinds of config used in container upgrade.
@@ -96,7 +96,7 @@ defer func() {
 }()
 ```
 
-在升级过程中，如果出现异常情况，会将新创建的 Snapshot 等相关资源进行清理操作，在回滚阶段，只需要恢复旧容器的配置，然后用恢复后的配置文件启动一个新容器既可。
+在升级过程中，如果出现异常情况，会将新创建的 Snapshot 等相关资源进行清理操作，在回滚阶段，只需要恢复旧容器的配置，然后用恢复后的配置文件启动一个新容器即可。
 
 ### Upgrade 功能演示
 
