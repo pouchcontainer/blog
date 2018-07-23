@@ -42,6 +42,7 @@ sudo add-apt-repository "deb http://mirrors.aliyun.com/opsx/pouch/linux/debian/ 
 ![Alt text](https://github.com/ProgrammingK/blog/blob/master/image/4.png)
 
 **3.安装PouchContainer**
+
 安装最新的PouchContainer版本
 
 ``` bash
@@ -66,6 +67,7 @@ sudo service pouch start
 
 ### 在VirtualBox中选择安装
 **1. 配置虚拟机**
+
 打开VirtualBox，新建-名称自定义-类型选择【Linux】-版本选择【Ubuntu (64-bit)】
 
 ![Alt text](https://github.com/ProgrammingK/blog/blob/master/image/20180723224944.png)
@@ -75,15 +77,19 @@ sudo service pouch start
 ![Alt text](https://github.com/ProgrammingK/blog/blob/master/image/20180723225219.png)
 
 **2. 进入虚拟机**
+
 启动新建实例，等待进入到登录阶段，用户名pouch，密码123456，切换到root用户
 
 **3. 检查网络**
+
 ping www.alibaba-inc.com，检查网络是否正常
 
 **4. 启动pouch服务**
+
 执行命令systemctl start pouch启动pouch服务（默认开机启动）
 
 **5. 创建基础容器并登录**
+
 执行pouch run -t -d busybox sh启动一个busybox基础容器
 执行pouch exec -it {ID} sh登入启动的容器，其中ID是上条命令输出的完整ID中的前六位,即可进入容器。
 
@@ -95,12 +101,14 @@ ping www.alibaba-inc.com，检查网络是否正常
 ### VritualBox设置共享文件夹
 
 **1. 设置共享文件夹**
+
 在VirtualBox工具页面选择：设置=>共享文件夹；选择本地代码文件夹，设置共享文件夹的名称
 ![Alt text](https://github.com/ProgrammingK/blog/blob/master/image/20180723214620.png)
 
 设置共享文件夹后，重启虚拟机
 
 **2. 挂载共享文件夹到目标目录下**
+
 使用指令：
 ```shell
 sudo mount -t vboxsf myPouch /root/gopath/src/github.com/alibaba/pouch
@@ -119,4 +127,5 @@ modprobe -a vboxguest vboxsf vboxvideo
 可参考VirtualBox文档：https://wiki.archlinux.org/index.php/VirtualBox_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
 
 **3. 测试挂载成功**
+
 在宿主机上的代码文件夹中增加一个代码无害的测试文件，在虚拟集中打开挂载的目标文件夹，在其中看到目标文件，挂载成功。

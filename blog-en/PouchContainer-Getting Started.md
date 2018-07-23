@@ -65,6 +65,7 @@ Afterwards, you can pull an image and run PouchContainer containers.
 
 #### Install VirtualMachine inside VirtualBox
 **1. Configure VirtualMachine**
+
 Open VirtualBox,choose "new" - select [Linux] - version [Ubuntu (64-bit)]
 
 ![Alt text](https://github.com/ProgrammingK/blog/blob/master/image/20180723224944.png)
@@ -74,6 +75,7 @@ Continue - Memery[1024M] - Continue - choose target vdi file - Create
 ![Alt text](https://github.com/ProgrammingK/blog/blob/master/image/20180723225219.png)
 
 **2. Login VirtualMachine**
+
 Start the new instance, login with username:pouch, pwd:123456;then, switch to root user
 
 **3. Checking Internet**
@@ -81,12 +83,15 @@ Start the new instance, login with username:pouch, pwd:123456;then, switch to ro
 ping www.alibaba-inc.com
 ```
 **4. Start pouch service**
+
 Run command:
 ```shell
 systemctl start pouch
 ```
 pouch service default to run after the instance started
+
 **5. Create basic container, and login**
+
 Use:
 ```shell
 pouch run -t -d busybox sh
@@ -106,12 +111,15 @@ You ***CAN NOT*** code in the VirtualMachine instance, if you want, please reffe
 
 ### Setting up Share Floder in VirtualBox
 **1. Choose source floder**
+
 choose the floder to share with the VM
 
 ![Alt text](https://github.com/ProgrammingK/blog/blob/master/image/20180723214620.png)
 
 restart the VM instance
+
 **2. Mount the source floder to target floder**
+
 Run command
 ```shell
 sudo mount -t vboxsf myPouch /root/gopath/src/github.com/alibaba/pouch
@@ -130,4 +138,5 @@ modprobe -a vboxguest vboxsf vboxvideo
 See also: https://wiki.archlinux.org/index.php/VirtualBox
 
 **3. Test**
+
 Insert a useless file at source floder, if you can find the file in target floder, successed!
