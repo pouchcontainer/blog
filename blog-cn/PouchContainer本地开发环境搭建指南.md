@@ -90,8 +90,26 @@ Afterwards, you can pull an image and run PouchContainer containers.
 
 以后，你就可以拉一个镜像然后运行PouchContainer容器了。
 
-
 # PouchContainer本地开发环境搭建指南
+
+# 在VirtualBox中选择安装
+##### 配置虚拟机v
+打开VirtualBox，新建-名称自定义-类型选择【Linux】-版本选择【Ubuntu (64-bit)】
+![Alt text](https://github.com/ProgrammingK/blog/blob/master/image/20180723224944.png)
+-继续-内存选择【1024M】-继续-使用【已有的虚拟硬盘文件】-选择步骤C中下载的vdi文件-创建。
+![Alt text](https://github.com/ProgrammingK/blog/blob/master/image/20180723225219.png)
+##### 进入虚拟机
+启动新建实例，等待进入到登录阶段，用户名pouch，密码123456，切换到root用户
+##### 检查网络
+ping www.alibaba-inc.com，检查网络是否正常
+##### 启动pouch服务
+执行命令systemctl start pouch启动pouch服务（默认开机启动）
+##### 创建基础容器并登录
+执行pouch run -t -d busybox sh启动一个busybox基础容器
+执行pouch exec -it {ID} sh登入启动的容器，其中ID是上条命令输出的完整ID中的前六位,即可进入容器。
+![Alt text](https://github.com/ProgrammingK/blog/blob/master/image/20180723225507.png)
+###### ***注意*** 
+该镜像中的pouch目录是直接clone了alibaba/pouch中的repo，无法直接在该目录中开发提交，此环境为上手体验环境，开发环境配置请看后一节。
 
 ## VritualBox设置共享文件夹
 
