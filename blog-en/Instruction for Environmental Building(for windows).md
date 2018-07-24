@@ -27,7 +27,7 @@ Downloading `ubuntuPouch.vdi` in the chat group, this file costs 3.5GB.
 ## 2.4. Starting New Case
 1. login name: pouch, password:123456
 ![undefined](https://cdn.nlark.com/lark/0/2018/png/132231/1532345382824-733e22eb-234c-4c8f-b22c-f1cd2a7a8553.png) 
-2. Inputting `sudo su` to change the user:
+2. Inputting `sudo su` to change the user:<br>
 ![undefined](https://cdn.nlark.com/lark/0/2018/png/132231/1532345631234-fd78bbb1-fafa-4bc5-b972-b688b56eaec6.png) 
 ## 2.5. Checking the network
 Inputting `ping alibaba-inc.com` to check the status of network.
@@ -35,7 +35,7 @@ Inputting `ping alibaba-inc.com` to check the status of network.
 1. Inputting `systemctl start pouch`
 2. Inputting `pouch run -t -d busybox sh` to start a busybox container
 3. Inputting `pouch exec -it {ID} sh` to login. {ID} is the first six number in the last command
-![undefined](https://cdn.nlark.com/lark/0/2018/png/132231/1532346183142-78265ff4-2b39-4947-9221-5bc2642bdd05.png) 
+![undefined](https://cdn.nlark.com/lark/0/2018/png/132231/1532346183142-78265ff4-2b39-4947-9221-5bc2642bdd05.png) <br>
 Till now, you can run PouchContainer in the environment of VirtualBox + Ubuntu16.04. This environment include the tools like vim, make, git, go and so on. The source code of pouch is in the path of `/root/gopath/src/github.com/alibaba/pouch`
 # 3. Mounting shared folder
 ## 3.1. Downloading the latest pouch code
