@@ -35,8 +35,8 @@
 
 ![EA9BA643-9DA5-4503-B530-9107C0A2B786.png](https://cdn.nlark.com/lark/0/2018/png/117855/1532346621286-a288a971-a72d-4c71-8a49-6953f7c3e27f.png) 
 
-#### 5. Check the Internet
-- Try the command 'ping www.alibaba.com' to check the Internet
+#### 5. Check the network 
+- Try the command 'ping www.alibaba.com' to check the network
 
 ![0B820657-710B-4234-980D-73EAFA134D0E.png](https://cdn.nlark.com/lark/0/2018/png/117855/1532346740950-3939b8e4-2545-4a77-bbaf-b47f266a388a.png) 
 
