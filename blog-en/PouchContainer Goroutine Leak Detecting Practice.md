@@ -239,3 +239,5 @@ When developing the HTTP Server, `net/http/pprof` helps us analyze the code. If 
 * [Concurrency is not Parallelism](https://talks.golang.org/2012/waza.slide#1) 
 * [Go Concurrency Patterns: Context](https://blog.golang.org/context) 
 * [Profilling Go Programs](https://blog.golang.org/profiling-go-programs) 
+
+origin doc link: https://github.com/pouchcontainer/blog/blob/master/blog-cn/PouchContainer%20Goroutine%20Leak%20%E6%A3%80%E6%B5%8B%E5%AE%9E%E8%B7%B5.md
