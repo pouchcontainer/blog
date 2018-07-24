@@ -36,6 +36,6 @@ For most Pods, the network configuration is in accordance with the above steps, 
 
 For other containers in the Pod, whether the Pod is in the "Host" network mode or has a separate Network Namespace, you only need to configure the NetworkMode to "Container" mode when you call Container Manager to create a container, and join the Network Namespace where the infra container is located.
 
-origin doc link
+origin doc link: https://github.com/pouchcontainer/blog/blob/master/blog-cn/PouchContainer%20CRI%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0.md
 
 
