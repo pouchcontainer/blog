@@ -37,7 +37,7 @@ type ExecRequest struct {
 
 4.ApiServer uses the returned URL to directly initiate a http request to the Stream Server of the node where the target container is located. The request header contains the "Upgrade" field, which is required to upgrade the http protocol to a streaming protocol such as websocket or SPDY to support multiple IOs. Stream processing, this article we take SPDY as an example.
 
-5.The Stream Server processes the request sent by the ApiServer. First, the previously saved exec request configuration is obtained from the Request Cache according to the token in the URL. After that, reply to the http request, agree to upgrade the protocol to SPDY, and wait for the ApiServer to create specified numbers of streams according to the configuration of the exec request, corresponding to the standard input Stdin, the standard output Stdout, and the standard error output Stderr.
+5.The Stream Server processes the request sent by the ApiServer. First, the previously saved exec request configuration is obtained from the Request Cache according to the token in the URL. After that, it replies to the http request, agree to upgrade the protocol to SPDY, and waits for the ApiServer to create specified numbers of streams according to the configuration of the exec request, corresponding to the standard input Stdin, the standard output Stdout, and the standard error output Stderr.
 
 6.After the Stream Server obtains the specified number of Streams, the Container Manager's `CreateExec` and `startExec` methods are invoked in turn to perform an exec operation on the target container and forward the IO stream to the corresponding stream.
 
