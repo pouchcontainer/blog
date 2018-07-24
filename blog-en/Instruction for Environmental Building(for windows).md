@@ -19,8 +19,8 @@ https://space.dingtalk.com/s/gwHOABmLzwLOGlgkPQPaACBhNzNjYjI5NTYxMzQ0NmUwOWRmMTF
 ## 2.2. Downloading Virtual Machine Backup
 Downloading `ubuntuPouch.vdi` in the chat group, this file costs 3.5GB.
 ## 2.3. Installing Virtual Machine Environment
-1. Choosing "new" in Oracle VM VirtualBox->Choosing a name whatever you want->'Linux' type->'Ubuntu (64-bit)' version->Next
-2. 1024M memory:
+1. Choosing "new" in Oracle VM VirtualBox->Choosing a name whatever you want->'Linux' type->'Ubuntu (64-bit)' version->Next.
+2. Use 1024M memory usually:<br>
 ![undefined](https://cdn.nlark.com/lark/0/2018/png/132231/1532345103260-6995b132-bbdc-49e5-93fd-cfbe30fb3f79.png)
 3. [Existent virtual hard disk file]->choosing `.vdi` in the session 2.2, then 'CREAT'
 ![undefined](https://cdn.nlark.com/lark/0/2018/png/132231/1532345138776-73add3b0-9f87-45e0-bf4b-9db6ef7d9b06.png) 
