@@ -126,4 +126,34 @@ You should ensure that there are no files in the pouch folder, as shown below:
    If the outputs are as followings, the mount is successful. Then you can develop happily on the host machine!
 ![rgua](https://github.com/lvyijin/learngit/blob/master/images/rgua.png "rgua")
 ![detail](https://github.com/lvyijin/learngit/blob/master/images/detail.png "detail")
+# Other tips
+## Configuring sshd
+
+Open the virtual machine and configure as shown below:
+  
+  ![net](https://github.com/lvyijin/learngit/blob/master/images/net.png "net")
+  ![port](https://github.com/lvyijin/learngit/blob/master/images/port.png "port")
+
+After configuring the VirtualBox, you need to enable the corresponding ssh port in the virtual machine and allow the root login permission through ssh. Please edit the configuration file in the virtual machine:
+```
+sudo vi /etc/ssh/sshd_config
+```
+Confirm that the ssh port is enabled:
+```
+# What ports, IPs and protocols we listen for
+Port 22
+```
+Allow the root login permission：
+```
+# Authentication
+PermitRootLogin yes
+```
+Restart ssh when the configuration is completed to make the new configuration take effect:
+```
+sudo /etc/init.d/ssh restart
+```
+Then you can login the root account through ssh on the command line of the host:
+```
+ssh -l root -p 1111 127.0.0.1
+```
 
