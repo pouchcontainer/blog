@@ -3,7 +3,7 @@
 # Check https://circleci.com/docs/2.0/language-go/ for more details
 version: 2
 jobs:
-  markdownlint-shellcheck:
+  markdownlint:
     docker:
       # this image is build from Dockerfile located in ./.circleci/Dockerfile
       - image: allencloud/pouchlint:v0.1
@@ -12,14 +12,7 @@ jobs:
       - checkout
       - run:
           name: use markdownlint v0.4.0 to lint markdown file (https://github.com/markdownlint/markdownlint)
-          command: |
-            find  ./ -name  "*.md" | xargs mdl -r ~MD010,~MD013,~MD024,~MD029,~MD033,~MD036
-      - run:
-          name: use ShellCheck (https://github.com/koalaman/shellcheck) to check the validateness of shell scripts in blog repo
-          command: |
-            find ./ -name "*.sh" | grep -v vendor | xargs shellcheck
-
-
+          command: find  ./ -name  "*.md" | xargs mdl -r ~MD010,~MD013,~MD024,~MD029,~MD033,~MD036
   misspell:
     docker:
       # this image is build from Dockerfile located in ./.circleci/Dockerfile
@@ -29,12 +22,10 @@ jobs:
       - checkout
       - run:
           name: use opensource tool client9/misspell to correct commonly misspelled English words 
-          command: |
-            find  ./* -name  "*"  | grep -v vendor | xargs misspell -error
-
+          command: find  ./* -name  "*" | xargs misspell -error
 workflows:
   version: 2
   ci:
     jobs:
-      - markdownlint-shellcheck
+      - markdownlint
       - misspell
