@@ -129,5 +129,5 @@ bind mounts依赖于宿主机文件系统目录结构，而volume，在PouchCont
 
 ## 5. 总结
 
-本文介绍了PouchContainer的volume机制， volume机制主要是为了解决pouch容器数据持久化的问题PouchContainer，目前支持local,tmpfs,ceph三种driver，同时支持以volume plugin的形式对接更多的第三方存储。
+本文介绍了PouchContainer的volume机制， volume机制主要是为了解决pouch容器数据持久化的问题, PouchContainer目前支持local,tmpfs,ceph三种driver，同时支持以volume plugin的形式对接更多的第三方存储。
 
