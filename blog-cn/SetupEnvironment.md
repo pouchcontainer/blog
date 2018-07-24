@@ -124,6 +124,46 @@ mkdir /root/gopath/src/github.com/alibaba/pouch
 ![rgua](https://github.com/lvyijin/learngit/blob/master/images/rgua.png "rgua")
 ![detail](https://github.com/lvyijin/learngit/blob/master/images/detail.png "detail")
 
+# 其他tips
+## sshd配置
+
+打开虚拟机，如下图操作：
+  
+  ![net](https://github.com/lvyijin/learngit/blob/master/images/net.png "net")
+  ![port](https://github.com/lvyijin/learngit/blob/master/images/port.png "port")
+
+完成VirtualBox的配置后，需要到虚拟机中开启对应的ssh端口，并且打开通过ssh登录root的权限。在虚拟机中编辑配置文件：
+
+```
+sudo vi /etc/ssh/sshd_config
+```
+
+确认已经开启ssh端口：
+
+```
+# What ports, IPs and protocols we listen for
+Port 22
+```
+
+并且允许登录root：
+
+```
+# Authentication
+PermitRootLogin yes
+```
+
+设定完成后重启ssh使新的配置生效：
+
+```
+sudo /etc/init.d/ssh restart
+```
+
+之后就可以在宿主机的命令行中通过ssh连接虚拟机登录root账户：
+
+```
+ssh -l root -p 1111 127.0.0.1
+```
+
 
 
   
