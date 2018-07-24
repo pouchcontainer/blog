@@ -20,11 +20,8 @@ https://space.dingtalk.com/s/gwHOABmLzwLOGlgkPQPaACBhNzNjYjI5NTYxMzQ0NmUwOWRmMTF
 Downloading `ubuntuPouch.vdi` in the chat group, this file costs 3.5GB.
 ## 2.3. Installing Virtual Machine Environment
 1. Choosing "new" in Oracle VM VirtualBox->Choosing a name whatever you want->'Linux' type->'Ubuntu (64-bit)' version->Next
-![undefined](https://cdn.nlark.com/lark/0/2018/png/132231/1532344993077-0cd56605-8b6f-4dc0-902e-0473ce67b629.png)
 2. 1024M memory:
-![undefined](https://cdn.nlark.com/lark/0/2018/png/132231/1532345103260-6995b132-bbdc-49e5-93fd-cfbe30fb3f79.png) 
 3. [Existent virtual hard disk file]->choosing `.vdi` in the session 2.2, then 'CREAT'
-![undefined](https://cdn.nlark.com/lark/0/2018/png/132231/1532345138776-73add3b0-9f87-45e0-bf4b-9db6ef7d9b06.png) 
 ## 2.4. Starting New Case
 1. login name: pouch, password:123456
 ![undefined](https://cdn.nlark.com/lark/0/2018/png/132231/1532345382824-733e22eb-234c-4c8f-b22c-f1cd2a7a8553.png) 
