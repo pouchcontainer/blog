@@ -10,7 +10,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;从阿里郎下载VirtualBox，或者从官网https://www.virtualbox.org/ 直接下载VirtualBox。
 #### 3、ubuntu64bit安装
 &nbsp;&nbsp;&nbsp;&nbsp;打开VirtualBox，新建一个虚拟机，点击新建.。![2.jpg](./image-cn/2.jpg)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;选择Linux，选择Ubuntu（64bit），如果找不到64bit系统支持，进入电脑BIOS设置，进行一下配置。Inter Virtual Technology默认是disable，将它改成enable。然后再次新建一个虚拟机，选择Linux，选择Ubuntu（64bit），选择使用已有的虚拟硬盘文件。再运行该虚拟机。
+&nbsp;&nbsp;&nbsp;&nbsp;选择Linux，选择Ubuntu（64bit），如果找不到64bit系统支持，进入电脑BIOS设置，进行一下配置。Inter Virtual Technology默认是disable，将它改成enable。然后再次新建一个虚拟机，选择Linux，选择Ubuntu（64bit），选择使用已有的虚拟硬盘文件。再运行该虚拟机。<br>
 ![3.jpg](./image-cn/3.jpg)<br>
 ### 环境配置
 #### 1、配置GuestAdditions
