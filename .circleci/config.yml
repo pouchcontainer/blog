@@ -3,12 +3,6 @@
 # Check https://circleci.com/docs/2.0/language-go/ for more details
 version: 2
 jobs:
-  build:
-    docker:
-      - image: allencloud/pouchlint:v0.1
-    steps:
-      - checkout
-      - run: echo "hello"
   markdownlint:
     docker:
       # this image is build from Dockerfile located in ./.circleci/Dockerfile
@@ -33,6 +27,5 @@ workflows:
   version: 2
   ci:
     jobs:
-      - build
       - markdownlint
       - misspell
