@@ -1,4 +1,6 @@
 # 基于VirtualBox + Ubuntu16.04 的 PouchContainer 体验环境搭建与上手指南
+## PouchContainer简介
+PouchContainer是一款由阿里巴巴开源的高效、轻量的企业级富容器引擎技术，具有隔离性强、可移植性高、资源占用少的特性。本文将简要介绍PouchContainer体验环境搭建的流程并提供一些有助于更优雅地开发的tips。
 ## 下载安装相关软件
 ### 下载开发环境的虚拟机备份
 
