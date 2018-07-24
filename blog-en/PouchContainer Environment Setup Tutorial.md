@@ -43,7 +43,7 @@
 ## Run PouchContainer
 
 #### 1. Start pouch service
-- exec 'systemctl start pouch' to start pouch service(Automatically start by default)
+- exec 'systemctl start pouch' to start pouch service(Auto-start by default)
 
 #### 2. Start busybox container
 - exec 'pouch run -t -d busybox sh' to start a busybox container, the output is container ID
