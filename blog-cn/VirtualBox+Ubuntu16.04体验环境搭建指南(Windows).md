@@ -8,7 +8,7 @@ PouchContainer 源自阿里巴巴内部场景，诞生初期，在如何为互�
 1. 打开【阿里郎】->选择左侧栏中的【管家】->办公软件管理，具体如图：
 ![undefined](https://cdn.nlark.com/lark/0/2018/png/132231/1532344205392-0ba64dae-b407-4ff7-b8b9-f221a93ae728.png)
 2. 在搜索框中输入VirtualBox，并安装
-![undefined](https://cdn.nlark.com/lark/0/2018/png/132231/1532344290135-ed2e9b67-766e-45ef-a72a-9ff034f27e22.png) 
+![undefined](https://cdn.nlark.com/lark/0/2018/png/132231/1532344290135-ed2e9b67-766e-45ef-a72a-9ff034f27e22.png) <br>
 【注】若没有【阿里郎】可在钉盘上下载：
 Mac版本地址：https://space.dingtalk.com/s/gwHOABma4QLOGlgkPQPaACBiMzk5ZWRjZTAyOGI0MTBkOGRkNTRjYzNkN2Q1NTFjOA  密码: p5Sb
 Windows版本地址：https://space.dingtalk.com/s/gwHOABmLzwLOGlgkPQPaACBhNzNjYjI5NTYxMzQ0NmUwOWRmMTFlN2UzMTYxNDQ4Mw  密码: V7ms
@@ -23,7 +23,7 @@ Windows版本地址：https://space.dingtalk.com/s/gwHOABmLzwLOGlgkPQPaACBhNzNjY
 ## 2.4. 启动新建实例
 1. 等待进入到登录阶段，用户名pouch，密码123456。
 ![undefined](https://cdn.nlark.com/lark/0/2018/png/132231/1532345382824-733e22eb-234c-4c8f-b22c-f1cd2a7a8553.png) 
-2. 命令行输入`sudo su`,切换到root用户,切换成功后会看到用户名会有变化：
+2. 命令行输入`sudo su`,切换到root用户,切换成功后会看到用户名会有变化：<br>
 ![undefined](https://cdn.nlark.com/lark/0/2018/png/132231/1532345631234-fd78bbb1-fafa-4bc5-b972-b688b56eaec6.png) 
 ## 2.5. 检查网络
 命令行中输入命令：`ping alibaba-inc.com`,检查网络是否畅通。
@@ -31,7 +31,7 @@ Windows版本地址：https://space.dingtalk.com/s/gwHOABmLzwLOGlgkPQPaACBhNzNjY
 1. 命令行中输入命令：`systemctl start pouch`
 2. 命令行中输入命令：`pouch run -t -d busybox sh`启动一个busybox基础容器，之后会显示busybox的ID
 3. 命令行中输入命令：`pouch exec -it {ID} sh`登入启动的容器。其中，{ID}是上条命令输出的完整ID中的前六位。
-![undefined](https://cdn.nlark.com/lark/0/2018/png/132231/1532346183142-78265ff4-2b39-4947-9221-5bc2642bdd05.png) 
+![undefined](https://cdn.nlark.com/lark/0/2018/png/132231/1532346183142-78265ff4-2b39-4947-9221-5bc2642bdd05.png) <br>
 此时，VirtualBox + Ubuntu16.04环境中已能成功运行起PouchContainer。体验环境中已经包含的工具有：vim、make、git、go等基本工具。其中pouch的源码路径位于`/root/gopath/src/github.com/alibaba/pouch`路径下
 # 3. 共享文件夹挂载
 ## 3.1. 下载最新版pouch代码
