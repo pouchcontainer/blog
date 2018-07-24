@@ -13,6 +13,7 @@ As we can see, `exec` a Pod is equivalent to `ssh` logging into the container. B
  
 ![stream-3.png | left | 827x296](https://cdn.yuque.com/lark/0/2018/png/103564/1527478375654-1c891ac5-7dd0-4432-9f72-56c4feb35ac6.png "")
 
+
 As shown above, the steps to execute a kubectl exec command are as follows:
 
 1.The essence of the `kubectl exec` command is to execute an exec command on a container in the Kubernetes cluster and forward the resulting IO stream to the users. So the request will first be forwarded to the Kubelet of the node where the container is located, and the Kubelet will then call the `Exec` interface in the CRI according to the configuration. The requested configuration parameters are as follows:
