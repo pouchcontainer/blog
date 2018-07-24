@@ -15,7 +15,7 @@ Windows版本地址：https://space.dingtalk.com/s/gwHOABmLzwLOGlgkPQPaACBhNzNjY
 ## 2.2. 下载开发环境的虚拟机备份
 群文件中下载`ubuntuPouch.vdi`，此文件大小约3.5GB。
 ## 2.3. 搭建开发虚拟机环境
-1. 在Oracle VM VirtualBox中选择"新建"，虚拟机名称可自定义，类型选择“Linux”，版本选择“Ubuntu (64-bit)”,并选择下一步，具体如图：
+1. 在Oracle VM VirtualBox中选择"新建"，虚拟机名称可自定义，类型选择“Linux”，版本选择“Ubuntu (64-bit)”,并选择下一步：
 2. 内存选择1024M，具体如图：
 ![undefined](https://cdn.nlark.com/lark/0/2018/png/132231/1532345103260-6995b132-bbdc-49e5-93fd-cfbe30fb3f79.png) 
 3. 选择【已有的虚拟硬盘文件】-选择步骤2.2中下载的`.vdi`文件，并选择“创建”。
