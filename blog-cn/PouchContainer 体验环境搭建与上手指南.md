@@ -8,9 +8,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;配置好git的name和email后，使用git clone git://github.com/alibaba/pouch.git 保存在git安装目录下的pouch文件夹内。或者下载一个goland进入官网下载即可，可免费试用30天。通过goland里面的file--settings--Version Control--Git配置好git，再new 一个project from version，通过url拉下这个源码。
 #### 2、Virtual Box安装
 &nbsp;&nbsp;&nbsp;&nbsp;从阿里郎下载VirtualBox，或者从官网https://www.virtualbox.org/ 直接下载VirtualBox。
-#### 3、ubantu64bit安装
+#### 3、ubuntu64bit安装
 &nbsp;&nbsp;&nbsp;&nbsp;打开VirtualBox，新建一个虚拟机，点击新建.。![2.jpg](./image-cn/2.jpg)
-&nbsp;&nbsp;&nbsp;&nbsp;选择Linux，选择Ubantu（64bit），如果找不到64bit系统支持，进入电脑BIOS设置，进行一下配置。Inter Virtual Technology默认是disable，将它改成enable。然后再次新建一个虚拟机，选择Linux，选择Ubantu（64bit），选择使用已有的虚拟硬盘文件。再运行该虚拟机。
+&nbsp;&nbsp;&nbsp;&nbsp;选择Linux，选择Ubuntu（64bit），如果找不到64bit系统支持，进入电脑BIOS设置，进行一下配置。Inter Virtual Technology默认是disable，将它改成enable。然后再次新建一个虚拟机，选择Linux，选择Ubuntu（64bit），选择使用已有的虚拟硬盘文件。再运行该虚拟机。
 ![3.jpg](./image-cn/3.jpg)
 ### 环境配置
 #### 1、配置GuestAdditions

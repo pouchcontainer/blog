@@ -4,7 +4,7 @@
 3. Ubuntu Linux
 ### Environment
 #### 1.Fork pouch and clone pouch to local
-* Fork a repo to youre account from PouchContainer's github(https://github.com/alibaba/pouch)
+* Fork a repo to your account from PouchContainer's github(https://github.com/alibaba/pouch)
 * clone pouch repo to local
 ```bash
 git clone https://github.com/youraccount/pouch.git
@@ -22,7 +22,7 @@ git config --global user.email "your email address"
 #### 3.Create Virtual Machine of ubuntu linux
 * open Virtual Box and select **New**, input name, select Linux for type, Ubuntu(64-bit) for version.just like the picture.
 ![1.png](./img/1.png) 
-* slect continue,select 1024M for memory size.
+* select continue,select 1024M for memory size.
 ![2.png](./img/2.png) 
 * select continue,and select Use an existing virtual hard disk file, select the file ubuntuPouch.vdi.
 ![3.png](./img/3.png) 
