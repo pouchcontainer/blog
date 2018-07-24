@@ -125,6 +125,7 @@ mkdir /root/gopath/src/github.com/alibaba/pouch
 ![detail](https://github.com/lvyijin/learngit/blob/master/images/detail.png "detail")
 
 
+
   
 
 
