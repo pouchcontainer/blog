@@ -20,7 +20,7 @@ PouchContainer 底层对接的是 Containerd v1.0.3 ，对比 Moby，在容器�
 
 
 对比 Moby 中容器存储架构，PouchContainer 主要不一样的地方：
-* PouchContainer  中没有了 GraphDriver 和 Layer 的概念，新的存储架构里引入了 Snapshotter 和 Snapshot，从而更加拥抱 CNCF 项目 containerd 的架构设计。Snapshotter 可以理解为存储驱动，比如 overlay、devicemapper、btrfs 等。Snapshot 为镜像快照，分为两种：一种只读的，即容器镜像的每一层只读数据；一种为可读写的，即容器可读写层，所有容器增量数据都会存储在可读写 Snapshot 中；
+* PouchContainer  中没有了 GraphDriver 和 Layer 的概念，新的存储架构里引入了 Snapshotter 和 Snapshot，从而更加拥抱 CNCF 项目 Containerd 的架构设计。Snapshotter 可以理解为存储驱动，比如 overlay、devicemapper、btrfs 等。Snapshot 为镜像快照，分为两种：一种只读的，即容器镜像的每一层只读数据；一种为可读写的，即容器可读写层，所有容器增量数据都会存储在可读写 Snapshot 中；
 * Containerd 中容器和镜像元数据都存储在 boltdb 中，这样的好处是每次服务重启不需要通过读取宿主机文件目录信息来初始化容器和镜像数据，而是只需要初始化 boltdb。
 
 ## Upgrade 功能需求
@@ -45,7 +45,7 @@ PouchContainer 底层对接的是 Containerd v1.0.3 ，对比 Moby，在容器�
 ## Upgrade 功能具体实现
 ### Upgrade API 定义
 
-首先说明一下 `upgrade`  API 入口层定义，用于定义升级操作可以对容器的哪些参数进行修改。如下 `ContainerUpgradeConfig` 的定义，容器升级操作可以对容器 `ContainerConfig` 和 `HostConfig` 都可以进行操作，如果在 PouchContainer github 代码仓库的 `apis/types` 目录下参看这两个参数的定义，可以发现实际上，`upgrade` 操作可以修改旧容器的__所有__相关配置。 
+首先说明一下 `upgrade`  API 入口层定义，用于定义升级操作可以对容器的哪些参数进行修改。如下 `ContainerUpgradeConfig` 的定义，容器升级操作可以对容器 `ContainerConfig` 和 `HostConfig` 都可以进行操作，如果在 PouchContainer github 代码仓库的 `apis/types` 目录下参看这两个参数的定义，可以发现实际上，`upgrade` 操作可以修改旧容器的 __所有__ 相关配置。 
 ```go
 // ContainerUpgradeConfig ContainerUpgradeConfig is used for API "POST /containers/upgrade".
 // It wraps all kinds of config used in container upgrade.
@@ -123,4 +123,4 @@ test   43b750   Up 3 seconds   34 seconds ago   registry.hub.docker.com/library/
 
 # 总结
 
-在企业生产环境中，容器 `upgrade` 操作和容器扩容、缩容操作一样也是的一个高频操作，但是，不管是在现在的 Moby 社区，还是 Containerd 社区都没有一个与该操作对标的 API，PouchContainer 率先实现了这个功能，解决了容器技术在企业环境中有状态服务更新发布的一个痛点问题。PouchContainer 现在也在尝试与其下游依赖组件服务如 Containerd 保持紧密的联系，所以后续也会将 `upgrade` 功能回馈给 Containerd 社区，增加 Containerd 的功能丰富度。 
+在企业生产环境中，容器 `upgrade` 操作和容器扩容、缩容操作一样也是一个高频操作，但是，不管是在现在的 Moby 社区，还是 Containerd 社区都没有一个与该操作对标的 API，PouchContainer 率先实现了这个功能，解决了容器技术在企业环境中有状态服务更新发布的一个痛点问题。PouchContainer 现在也在尝试与其下游依赖组件服务如 Containerd 保持紧密的联系，所以后续也会将 `upgrade` 功能回馈给 Containerd 社区，增加 Containerd 的功能丰富度。 
