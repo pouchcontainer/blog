@@ -1,13 +1,13 @@
-> PouchContainer volume is a mechanism specifically designed to solve the data persistence of the container. To understand the mechanism of the volume, you may need to understand the mirroring mechanism of PouchContainer.
+> PouchContainer volume is a mechanism specifically designed to solve the data persistence of the container. To understand the mechanism of the volume, you may need to understand the image mechanism of PouchContainer.
 
-> PouchContainer, like Docker, implements a layered mechanism for mirroring. The so-called mirror layering mechanism means that the mirror image of the container is actually superimposed by multiple read-only mirror layers, so that different mirror images can reuse the mirror layer, which greatly speeds up the efficiency of image distribution and reduces container startup time.
+> PouchContainer, like Docker, implements a layered mechanism for image. The so-called mirror layering mechanism means that the mirror image of the container is actually superimposed by multiple read-only mirror layers, so that different mirror images can reuse the mirror layer, which greatly speeds up the efficiency of image distribution and reduces container startup time.
 
-> When the container needs to be started, pouchd (pouchd mentioned below refers to the PouchContainer daemon) will add a read-write layer at the top level of the boot image, and all subsequent read and write operations on the container will be recorded in the read-write layer.
-However, this also introduces a problem, that is, HOW-TO persistent container data. If we delete the container and start it again through the image, the history changes about the container are lost, which is fatal for stateful applications such as databases.
+> When the container needs to be started, pouchd (pouchd mentioned below refers to the PouchContainer daemon) will add a read-write layer at the top level of the boot image, and all subsequent read and write operations in the container will be recorded in the read-write layer.
+However, this also introduces a problem, that is, HOW-TO persist container data. If we delete the container and start it again through the image, the history changes about the container are lost, which is fatal for stateful applications such as databases.
 
 > Volume bypasses the mirroring mechanism, so that the data in the container are  stored on the host machine in the form of a normal file or directory. 
 
-> The data in the volume will not be affected even though the container is stopped or deleted, thereby implementing container data persistence feature. Moreover volume data can be shared between different containers.
+> The data in the volume will not be affected even though the container is stopped or deleted, thereby implementing container data persistence feature. Moreover, volume data can be shared between different containers.
 
 ## 1. PouchContainer Volume Overview
 
@@ -71,7 +71,7 @@ Firstly, a local volume can be created under a specified local volume. This feat
 pouch volume create --driver local --option mount=/mnt/mysql_data  --name mysql_data
 ```
 
-Secondly, the size of volume can be limited. This feature relies on the quato functionality of the underly file system. For now, the supported file systems include ext4 and xfs, specific kernel versions of which are also required.
+Secondly, the size of volume can be limited. This feature relies on the quato functionality of the underlying file system. For now, the supported file systems include ext4 and xfs, specific kernel versions of which are also required.
 
 ```powershell
 pouch volume create --driver local --option size=10G --name test_quota
