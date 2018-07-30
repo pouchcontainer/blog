@@ -26,7 +26,7 @@ __2、设置新建虚拟电脑的名称和系统类型__
 
 ![image.png | left | 498x449](https://cdn.nlark.com/lark/0/2018/png/124199/1532952147747-22a62b89-a974-4e25-a835-1327ba455f78.png "")
 
-__3、设置内存大小，可以选择默认大小（1024MB）,点击“继续”__
+__3、设置内存大小，可以选择默认大小（1024MB），点击“继续”__
 
 ![image.png | left | 497x438](https://cdn.nlark.com/lark/0/2018/png/124199/1532952488126-781dcfd5-521e-46cb-88b0-fe55ddc6c2de.png "")
 
@@ -48,27 +48,27 @@ __2、切换到root权限__
 sudo -i
 ```
 
-__3、检查网络：__
+__3、检查网络__
 ```
 ping www.alibaba-inc.com
 ```
 
-__4、启动pouch服务（默认开机启动）:__
+__4、启动pouch服务（默认开机启动）__
 ```
-systemctl start pouch  //如果有问题，请确认网络连接正确
+systemctl start pouch  # 如果有问题，请确认网络连接正确
 ```
 
-__5、启动一个已经存在的busybox基础容器：__
+__5、启动一个已经存在的busybox基础容器__
 ```
 pouch run -t -d busybox sh
 ```
 
-__6、如果您没有busybox，可以pull：__
+__6、如果您没有busybox，可以pull__
 ```
 pouch pull busybox
 ```
 
-__7、登录到启动的容器中，其中{ID}是启动命令输出的完整ID中的前六位：__
+__7、登录到启动的容器中，其中{ID}是启动命令输出的完整ID中的前六位__
 ```
 pouch exec -it {ID} sh
 ```
@@ -84,11 +84,12 @@ __1、端口转发__
 
 ![image.png | left | 558x389](https://cdn.nlark.com/lark/0/2018/png/135654/1532955458851-bc1c46ed-1ad9-4714-8d4c-1a2deb83f5ec.png "")
 
-点击红框中的icon，设置主机端口9022，子系统端口22，保存。
+点击红框中的icon，设置主机端口**9022**，子系统端口**22**，保存。
 
 ![image.png | left | 550x397](https://cdn.nlark.com/lark/0/2018/png/135654/1532955772003-e4dba259-6dae-46bf-96a8-bc9c38f10115.png "")
 
 __2、本机终端连接__
+
 在终端输入
 ```
 $  ssh -p 9022 username@127.0.0.1
