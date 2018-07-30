@@ -16,60 +16,60 @@ __3. Customizable installation is available__
 ![image.png | left | 556x370](https://cdn.nlark.com/lark/0/2018/png/135654/1532965968099-0b8e72cc-fe70-452a-a5db-2a8c4fd63d63.png "")
 
 # Configuring VirtualBox
-__1. OpenVirtualBox，Click New in the VirtualBox Manager to create a new virtual machine__
+__1. Open VirtualBox. Click New in the VirtualBox Manager to create a new virtual machine__
 
 ![image.png | left | 265x68](https://cdn.nlark.com/lark/0/2018/png/135654/1532966022381-d6c1f736-be1e-4a84-93ca-f14f33a85d75.png "")
 
-__2. Input the name, systemm type and version of the new virtual machine__
+__2. Input the name, system type and version of the new virtual machine__
 * Choosing a desired name
 * Linux type
 * Ubuntu (64-bit)
 
 ![image.png | left | 538x485](https://cdn.nlark.com/lark/0/2018/png/135654/1532966206015-a825b620-aff5-49b2-b630-9a7302333a8a.png "")
 
-__3. Set the memory size of the virtual machine, or choosing the default size(1024 MB).  Then click Next__
+__3. Set the memory size of the virtual machine, or choose the default size(1024 MB).  Then click *Next*__
 
 ![image.png | left | 551x485](https://cdn.nlark.com/lark/0/2018/png/135654/1532966237848-4134d823-745d-46ca-bc7b-bb91a029c478.png "")
 
 __4. Virtual hard disk settings__
-* Choose Using the existing virtual hard disk file,  click to choose the file (choose ubuntuPouch.vdi, this Ubuntu has been installed PouchContainer).
-*  If there is no such a file, click create the virtual hard disk now, and you can configure the system itself and manually install the PouchContainer. Then click create
+* Choose *Using the existing virtual hard disk file*,  click to choose the file ( ubuntuPouch.vdi, PouchContainer has been installed in Ubuntu ).
+*  If there is no such a file, click *create the virtual hard disk now*, and you can configure the system itself and manually install the PouchContainer. Then click *Create*
 
 ![image.png | left | 564x492](https://cdn.nlark.com/lark/0/2018/png/135654/1532966506742-18f40273-a294-47cd-b799-bcaf115579d3.png "")
 
 # Start virtual machine and log in the pouch
-__1. Click start, input the original username and password__
+__1. Click *Start*, input the original username and password__
 ```
 username：pouch
 password：123456
 ```
 
-__2、Switch to the root user__
+__2. Switch to the root user__
 ```
 sudo -i
 ```
 
-__3、Check network connection__
+__3. Check network connection__
 ```
 ping www.alibaba-inc.com
 ```
 
-__4、Start the pouch service (default boot) __
+__4. Start the pouch service (default boot)__
 ```
-systemctl start pouch  //If not succeed, check the network again   
+systemctl start pouch  # If not succeed, check the network again   
 ```
 
-__5、Start an existing busybox base container__
+__5. Start an existing busybox container__
 ```
 pouch run -t -d busybox sh
 ```
 
-__6、Do pull if no busybox available__
+__6. Pull busybox if not available__
 ```
 pouch pull busybox
 ```
 
-__7、Log in the started container, the ID is the first 6 digits of the complete IDs from the previous __
+__7. Log in the started container, the {ID} is the first 6 digits of the complete ID from the previous output__
 ```
 pouch exec -it {ID} sh
 ```
@@ -80,8 +80,9 @@ command output
 
 # Connecting Mac terminal with Virtualbox
 Using a virtual machine created by Virtualbox while working can effectively reduce potential interference between the local environment and the working environment.  However, the UI of Server is not friendly. Using SSH to connect to virtual machine and local terminals to edit is a suggesting alternative.
-__1、Port forwarding__
-* Click *Setting*, *Internet, Advanced and Port forwarding*
+
+__1. Port forwarding__
+* Click *Setting*, *Internet, Advanced* and *Port forwarding*
 
 ![image.png | left | 568x395](https://cdn.nlark.com/lark/0/2018/png/135654/1532967358783-7cb8dc18-6b20-47bd-9fdb-1a2f60d531dc.png "")
 
@@ -89,7 +90,18 @@ __1、Port forwarding__
 
 ![image.png | left | 544x393](https://cdn.nlark.com/lark/0/2018/png/135654/1532967432115-464b2478-dd49-4aa8-ba66-21cca6c1c8fd.png "")
 
-* Local terminal connection and a successful connection interface will be:
+__2. Local terminal connection __
+
+* Input to the terminal
+```
+$  ssh -p 9022 username@127.0.0.1
+```
+or
+```
+$ ssh -p 9022 username@localhost
+```
+
+* A successful connection interface will be:
 
 ![image.png | left | 614x289](https://cdn.nlark.com/lark/0/2018/png/135654/1532967488069-5a46f6aa-b9c0-4a98-9cb8-feaceaa4c53c.png "")
 
