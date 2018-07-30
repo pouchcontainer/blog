@@ -80,6 +80,7 @@ pouch exec -it {ID} sh
 使用virtualbox创建虚拟机进行工作，可以有效减少本机环境与工作环境之间的相互影响。但由于Server虚拟机的界面不友好，因而使用SSH连接到虚拟机，使用本地终端编辑是一个非常好的选择。
 
 __1、端口转发__
+
 点击“设置”-“网络”-“高级”-“端口转发”
 
 ![image.png | left | 558x389](https://cdn.nlark.com/lark/0/2018/png/135654/1532955458851-bc1c46ed-1ad9-4714-8d4c-1a2deb83f5ec.png "")
