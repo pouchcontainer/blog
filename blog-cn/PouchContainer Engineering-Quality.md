@@ -1,6 +1,6 @@
 # 0. Preface
 
-With the continuous iteration and improvement of [PouchContainer] (https://github.com/alibaba/pouch), the project has grown larger, which has attracted many external developers to participate in the development of the project. Because each contributor's coding habits are different, the code reviewer's responsibility is not only to focus on logical correctness and performance issues, but also on code style, because a unified code specification is a prerequisite for maintaining project code maintainability. In addition to the unified project code style, the coverage and stability of test cases is also the focus of the project. In simple terms, in the absence of regression test cases, how do you ensure that each code update does not affect existing features?
+With the continuous iteration and improvement of [PouchContainer](https://github.com/alibaba/pouch), the project has grown larger, which has attracted many external developers to participate in the development of the project. Because each contributor's coding habits are different, the code reviewer's responsibility is not only to focus on logical correctness and performance issues, but also on code style, because a unified code specification is a prerequisite for maintaining project code maintainability. In addition to the unified project code style, the coverage and stability of test cases is also the focus of the project. In simple terms, in the absence of regression test cases, how do you ensure that each code update does not affect existing features?
 
 This article shares PouchContainer's practices in code style specifications and golang unit test cases.
 
@@ -10,9 +10,9 @@ PouchContainer is a project built by the golang language, we use shell scripts t
 
 ## 1.1 Golinter - Unified coding style format.
 
-The syntax of golang is simple, and the community has a complete [CodeReview] (https://github.com/golang/go/wiki/CodeReviewComments) guide to make most golang projects have the same code style, rarely caught in the __ religion __ dispute. On the basis of the community, PouchContainer also defines some specific rules to stipulate the developer, in order to ensure the readability of the code, the specific content can be read [here] (https://github.com/alibaba/pouch/blob /master/docs/contributions/code_styles.md#additional-style-rules).
+The syntax of golang is simple, and the community has a complete [CodeReview](https://github.com/golang/go/wiki/CodeReviewComments) guide to make most golang projects have the same code style, rarely caught in the __ religion __ dispute. On the basis of the community, PouchContainer also defines some specific rules to stipulate the developer, in order to ensure the readability of the code, the specific content can be read [here](https://github.com/alibaba/pouch/blob/master/docs/contributions/code_styles.md#additional-style-rules).
 
-However, it is difficult to ensure that the project code style is consistent by relying on written agreements to make specifications. So golang, like other languages, provides the official toolchain, such as [golint] (https://github.com/golang/lint), [gofmt](https://golang.org/cmd/gofmt) , [goimports] (https://github.com/golang/tools/blob/master/cmd/goimports/doc.go) and [go vet](https://golang.org/cmd/vet) etc. These tools can check and unify the code style before compilation, providing automation for subsequent processes such as code review. Currently PouchContainer runs the above code checking tool in CircleCI in the **every** developer's Pull Request. If the inspection tool displays an exception, the code reviewer has the right to **reject** the review, or even reject the merge code.
+However, it is difficult to ensure that the project code style is consistent by relying on written agreements to make specifications. So golang, like other languages, provides the official toolchain, such as [golint](https://github.com/golang/lint), [gofmt](https://golang.org/cmd/gofmt) , [goimports](https://github.com/golang/tools/blob/master/cmd/goimports/doc.go) and [go vet](https://golang.org/cmd/vet) etc. These tools can check and unify the code style before compilation, providing automation for subsequent processes such as code review. Currently PouchContainer runs the above code checking tool in CircleCI in the **every** developer's Pull Request. If the inspection tool displays an exception, the code reviewer has the right to **reject** the review, or even reject the merge code.
 
 In addition to the official tools, we can also select third-party code checking tools in the open source community, such as [errcheck](https://github.com/kisielk/errcheck), it can be used to check if the developer has processed the **error** returned by the function.  However, these tools do not have a uniform output format, which makes it difficult to integrate the output of different tools. Fortunately, some people in the open source community have implemented this layer of unified interface, namely [gometalinter](https://github.com/alecthomas/gometalinter), which can integrate various code checking tools. The recommended combination is:
 
@@ -43,7 +43,7 @@ dosomething() {
 dosomething
 ```
 
-PouchContainer will use [shellcheck] (https://github.com/koalaman/shellcheck) to check the shell script in the current project. Taking the above code as an example, shellcheck detection will get a warning of unused variables. This tool can detect potential problems with shell scripts during the code review phase, reducing the chance of runtime errors.
+PouchContainer will use [shellcheck](https://github.com/koalaman/shellcheck) to check the shell script in the current project. Taking the above code as an example, shellcheck detection will get a warning of unused variables. This tool can detect potential problems with shell scripts during the code review phase, reducing the chance of runtime errors.
 
 ```plain
 In test.sh line 3:
@@ -51,7 +51,7 @@ pouch_version=0.5.x
 ^-- SC2034: pouch_version appears unused. Verify it or export it.
 ```
 
-PouchContainer's current continuous integration task will scan the `.sh` scripts in the project and check them one by one using the shellcheck. See [here](https://github.com/alibaba/pouch/blob/master/.circleci/config .yml#L21-L24) for details .
+PouchContainer's current continuous integration task will scan the `.sh` scripts in the project and check them one by one using the shellcheck. See [here](https://github.com/alibaba/pouch/blob/master/.circleci/config.yml#L21-L24) for details .
 
 > NOTE: When the shellcheck check is too strict, the project can be bypassed by a comment, or a check rule can be closed in the project. Specific check rules can be found at [here](https://github.com/koalaman/shellcheck/wiki).
 
@@ -59,7 +59,7 @@ PouchContainer's current continuous integration task will scan the `.sh` scripts
 
 PouchContainer is an open source project and it's documentation is as important as the code's, because documentation is the best way for users to understand PouchContainer. The document is written in the form of markdown, and its formatting and spelling errors are the focus of the project.
 
-As same as the code, if there is only a textual convention, there will still be a missed judgment, so PouchContainer uses [markdownlint] (https://github.com/markdownlint/markdownlint) and [misspell](https://github.com/client9/misspell) to check the document format and spelling errors, these checks have the same status as `golint` and will run in CircleCI every time the Pull Request is executed. Once an exception occurs, the code reviewer has the right to **reject** review or merge the code.
+As same as the code, if there is only a textual convention, there will still be a missed judgment, so PouchContainer uses [markdownlint](https://github.com/markdownlint/markdownlint) and [misspell](https://github.com/client9/misspell) to check the document format and spelling errors, these checks have the same status as `golint` and will run in CircleCI every time the Pull Request is executed. Once an exception occurs, the code reviewer has the right to **reject** review or merge the code.
 
 PouchContainer's current continuous integration task checks the markdown document layout format in the project, and also checks the spelling of all files. For details, see [here](https://github.com/alibaba/pouch/blob/master/.circleci/config.yml#L13-L20).
 
