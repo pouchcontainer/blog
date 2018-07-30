@@ -106,7 +106,7 @@ Due to the poor operation experience in VirtualBox, some people who are accustom
 
   Close your VM and open VirtualBox. Click <Settings>--<Shared Folders>--<Add Shared Folders> of this VM. Choose the pouch path cloned from GitHub as the `Folder Path`, set "word" as the `Folder Name` (MENTION: `Folder Name` cannot be the same name as the pouch folder on your host). Click "Auto Mount" and "Make Permanent", and click "OK" to finish.
 
-  ![image-20180730192513951](/var/folders/fc/fqj6x45x3jqbmy1yq1xh9dm00000gn/T/abnerworks.Typora/image-20180730192513951.png)
+  ![image-20180730192513951](https://i.loli.net/2018/07/30/5b5f2cbce4f54.png)
 
 - Mount the shared folder on your VM.
 
@@ -143,7 +143,7 @@ Due to the poor operation experience in VirtualBox as well as the complicated st
 
 - Open <Settings>--<Network>-<Advanced>--<Port Forwarding>. Create a new TCP protocol, set the `Host Port` as you want, and set the `Guest Port` as 22. Click "OK".
 
-  ![image-20180730194345483](/Users/sharon.zxw/Desktop/image-20180730194345483.png)
+  ![image-20180730194345483](https://i.loli.net/2018/07/30/5b5f2cbc4a0d3.png)
 
 - Connect to your VM via `ssh` in Terminal.
 

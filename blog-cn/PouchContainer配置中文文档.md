@@ -105,7 +105,7 @@ PouchContainer是阿里巴巴集团为了促进容器技术（container）的发
 
   关闭虚拟机并打开VirtualBox，点击虚拟机的<设置>--<共享文件夹>，添加新的文件夹。文件夹路径选择本地的从GitHub上clone下来的pouch文件夹路径，文件夹名字可以叫`work`（***注意这里名字不能和pouch文件夹同名***），点击选择下面的“自动挂载”和“固定分配”，点击“确定”完成配置。
 
-  ![image-20180730192513951](/var/folders/fc/fqj6x45x3jqbmy1yq1xh9dm00000gn/T/abnerworks.Typora/image-20180730192513951.png)
+  ![image-20180730192513951](https://i.loli.net/2018/07/30/5b5f2cbce4f54.png)
 
 * 将配置好的host machine路径中的代码挂载到虚拟机中。
 
@@ -142,7 +142,7 @@ PouchContainer是阿里巴巴集团为了促进容器技术（container）的发
 
 * 打开VirtualBox里虚拟机的<设置>--<网络>--<高级>，选择<端口转发>。新建一个TCP协议，宿主端口随意设置，客户端口设为22，点击“确定”。
 
-  ![image-20180730194345483](/Users/sharon.zxw/Desktop/image-20180730194345483.png)
+  ![image-20180730194345483](https://i.loli.net/2018/07/30/5b5f2cbc4a0d3.png)
 
 * 在本地的Terminal利用`ssh`连接到虚拟机。
 
