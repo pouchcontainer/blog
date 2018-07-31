@@ -264,4 +264,4 @@ PouchContainer integrates unit test cases into the code review phase, and review
 
 In the code review phase, code style checking, unit testing, and integration testing should be run through continuous integration to help reviewers make accurate decisions, while PouchContainer currently relies on TravisCI/CircleCI and [pouchrobot](https://github.com/pouchcontainer/pouchrobot) to complete code style checking and testing.
 
-To see the origin doc,please [click here](https://github.com/pouchcontainer/blog/blob/master/blog-cn/PouchContainer%20%E5%B7%A5%E7%A8%8B%E8%B4%A8%E9%87%8F%E5%AE%9E%E8%B7%B5.md)
+To view the origin doc, please [click here](https://github.com/pouchcontainer/blog/blob/master/blog-cn/PouchContainer%20%E5%B7%A5%E7%A8%8B%E8%B4%A8%E9%87%8F%E5%AE%9E%E8%B7%B5.md)
