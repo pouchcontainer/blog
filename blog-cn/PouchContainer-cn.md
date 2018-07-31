@@ -34,7 +34,7 @@ PouchContainer 是阿里巴巴集团开源的高效、轻量级企业级富容�
 	
 	5. 单击 **安装**。
 
-####安装 VirtualBox
+#### 安装 VirtualBox
 
 请参考以下步骤执行：
 
