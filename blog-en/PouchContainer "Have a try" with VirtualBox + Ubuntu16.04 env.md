@@ -19,12 +19,15 @@ Since PouchContainer is an enterprise solution, it is only supported on `Linux`.
 ### Steps for Importing Image
 
 1. Open VirtualBox, `create` an instance, select `Linux` - `Ubuntu(64-bit)`, name can be customized
+
 ![](https://i.loli.net/2018/07/30/5b5ed82dc96e8.png)
 > If you can only choose a version of 32-bit, you can try to turn on the `Virtualization` in the Host Machine's BIOS, and restart
 2. Select `Continue`, select `1024M` for memory, and then continue
 3. Select `Use Existing Virtual Hard Disk File`, then import the `Trail Version Image`, click `create`
+
 ![](https://i.loli.net/2018/07/30/5b5ed8d04536f.png)
 
+<<<<<<< HEAD
 ## Installation for PouchContainer
 ### Prerequisites
 1. PouchContainer supports LXCFS to provide strong isolation, so you should install LXCFS firstly. By default, LXCFS is enabled.
@@ -61,6 +64,11 @@ Afterward, you have already finished the installation.
 
 ## Steps for Starting Service
 1. Start the instance that we created, and then log in
+=======
+### Steps for Starting Service
+1. Start the instance that we just created, log in with `username: pouch / password: 123456`
+
+>>>>>>> 3bc740b3e623360b0e24a4954a9a883e036b2d4f
 ![](https://i.loli.net/2018/07/30/5b5eda998850b.png)
 2. Switch to root user
 ``` bash
@@ -87,6 +95,7 @@ pouch exec -it {ID}
 > {ID} means top six characters of the key
 
 After finishing these steps, a new basic container has already been started and successfully log in.
+
 ![](https://i.loli.net/2018/07/30/5b5edd8c3f50f.png)
 
 ## Development Environment Configuration
@@ -144,7 +153,9 @@ When mounting,  enhanced plug-ins for VirtualBox are needed, which can be instal
 apt install virtualbox-guest-x11
 ```
 In VirtualBox，Set the project directory folder of the host machine to `shared folder`, and choose `automatic mount` and `fixed assignment`。
+
 ![](https://i.loli.net/2018/07/30/5b5eee8226510.png)
+
 go to the directory /root/gopath/src/github.com/alibaba/, remove the files from the original pouch directory(retain the pouch folder)，execute command to mount in the directory. (where SHARE_FOLDER_NAME is the name of the shared folder)
 ``` bash
 sudo mount -t vboxsf SHARE_FOLDER_NAME pouch/
