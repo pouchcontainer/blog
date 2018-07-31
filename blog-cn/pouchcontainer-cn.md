@@ -1,10 +1,11 @@
-﻿# 如何为 PouchContainer 搭建运行环境?
+# 如何为 PouchContainer 搭建运行环境?
 
 ## 背景介绍
  
 PouchContainer 是阿里巴巴集团开源的高效、轻量级企业级富容器引擎技术，可以帮助企业快速提升服务器的利用效率。PouchContainer 在阿里内部经过多年的使用，已经具有较强的可靠性和稳定性。目前 PouchContainer 仅支持在 Ubuntu 和 CentOS 上运行。
 
 下面将介绍如何在 Windows/Mac 中通过 VirtualBox 和 Ubuntu16.04 快速搭建 PouchContainer 的运行环境，帮助用户在其他的操作系统中也可以使用 PouchContainer。 
+
 
 ## 前提条件
 
