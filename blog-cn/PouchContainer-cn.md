@@ -1,7 +1,7 @@
-﻿# 如何为 PouchContainer 搭建运行环境?
+# 如何为 PouchContainer 搭建运行环境?
 
 ## 背景介绍
- 
+
 PouchContainer 是阿里巴巴集团开源的高效、轻量级企业级富容器引擎技术，可以帮助企业快速提升服务器的利用效率。PouchContainer 在阿里内部经过多年的使用，已经具有较强的可靠性和稳定性。目前 PouchContainer 仅支持在 Ubuntu 和 CentOS 上运行。
 
 下面将介绍如何在 Windows/Mac 中通过 VirtualBox 和 Ubuntu16.04 快速搭建 PouchContainer 的运行环境，帮助用户在其他的操作系统中也可以使用 PouchContainer。 
@@ -17,22 +17,22 @@ PouchContainer 是阿里巴巴集团开源的高效、轻量级企业级富容�
 选择以下两种方式中的任意一种:
 
 - 钉盘下载
-	
-	Mac 版本：[Mac Download](https://space.dingtalk.com/s/gwHOABma4QLOGlgkPQPaACBiMzk5ZWRjZTAyOGI0MTBkOGRkNTRjYzNkN2Q1NTFjOA)    密码: p5Sb
 
-	Windows 版本：[Windows Download](https://space.dingtalk.com/s/gwHOABmLzwLOGlgkPQPaACBhNzNjYjI5NTYxMzQ0NmUwOWRmMTFlN2UzMTYxNDQ4Mw) 密码：V7ms
-   
+Mac 版本：[Mac Download](https://space.dingtalk.com/s/gwHOABma4QLOGlgkPQPaACBiMzk5ZWRjZTAyOGI0MTBkOGRkNTRjYzNkN2Q1NTFjOA)    密码: p5Sb
+
+Windows 版本：[Windows Download](https://space.dingtalk.com/s/gwHOABmLzwLOGlgkPQPaACBhNzNjYjI5NTYxMzQ0NmUwOWRmMTFlN2UzMTYxNDQ4Mw) 密码：V7ms
+
 - 阿里郎下载
-    
-	1. 打开阿里郎；
-	
-	2. 在左侧导航栏，选择**管家**；
-	
-	3. 在右侧页面，选择**办公软件管理**；
-    
-	4. 在右上方的搜索栏, 输入 **VirtualBox**；
-	
-	5. 单击 **安装**。
+
+1. 打开阿里郎；
+
+2. 在左侧导航栏，选择**管家**；
+
+3. 在右侧页面，选择**办公软件管理**；
+
+4. 在右上方的搜索栏, 输入 **VirtualBox**；
+
+5. 单击 **安装**。
 
 ####安装 VirtualBox
 
@@ -52,7 +52,7 @@ PouchContainer 是阿里巴巴集团开源的高效、轻量级企业级富容�
 
 7. 单击**安装**；
 
-  **注意:** 安装 VirtualBox 过程中，如果弹出是否安装 Oracle Corporation 的窗口，请单击 **安装**。 
+**注意:** 安装 VirtualBox 过程中，如果弹出是否安装 Oracle Corporation 的窗口，请单击 **安装**。 
 
 8. 安装结束后，单击**完成**。
 
@@ -100,7 +100,7 @@ PouchContainer 是阿里巴巴集团开源的高效、轻量级企业级富容�
 11. 单击**打开**；
 
 12. 单击**创建**。
- 
+
 ## 步骤：创建一个 pouchcontainer 实例
 
 在完成准备工作后，请参考以下步骤执行：
@@ -115,7 +115,7 @@ PouchContainer 是阿里巴巴集团开源的高效、轻量级企业级富容�
 
 5. 输入`1234566`并按回车键；
 
-  **注意：** 如果未跳转到根目录，请重新设置您的密码（命令行：`sudo passwd root`）。请输入您的密码两次。
+**注意：** 如果未跳转到根目录，请重新设置您的密码（命令行：`sudo passwd root`）。请输入您的密码两次。
 
 6. 输入 `ping www.alibaba-inc.com` 并按回车键， 检查网络是否正常；
 
@@ -133,7 +133,7 @@ PouchContainer 是阿里巴巴集团开源的高效、轻量级企业级富容�
 
 13. 输入 `ps -ef | grep pouch` 并按回车键，检查 pouch 是否启动；
 
-  **注意：** 如果 pouch 启动失败，输入 `systemctl start pouch` 并按回车键。
+**注意：** 如果 pouch 启动失败，输入 `systemctl start pouch` 并按回车键。
 
 14. 输入 `Pouch run -t -d busybox sh` 并按回车键，启动一个 busybox basic container
 

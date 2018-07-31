@@ -17,22 +17,22 @@ Before you begin, download and install VirtualBox and UbuntuPouch
 Choose one of the following ways:
 
 - From Dingtalk Cloud
-	
-	MacVersion£º[Mac Download](https://space.dingtalk.com/s/gwHOABma4QLOGlgkPQPaACBiMzk5ZWRjZTAyOGI0MTBkOGRkNTRjYzNkN2Q1NTFjOA)    Password: p5Sb
 
-	Windows Version£º[Windows Download](https://space.dingtalk.com/s/gwHOABmLzwLOGlgkPQPaACBhNzNjYjI5NTYxMzQ0NmUwOWRmMTFlN2UzMTYxNDQ4Mw) Password: V7ms
-   
+MacVersion£¼[Mac Download](https://space.dingtalk.com/s/gwHOABma4QLOGlgkPQPaACBiMzk5ZWRjZTAyOGI0MTBkOGRkNTRjYzNkN2Q1NTFjOA)    Password: p5Sb
+
+Windows Version£¼[Windows Download](https://space.dingtalk.com/s/gwHOABmLzwLOGlgkPQPaACBhNzNjYjI5NTYxMzQ0NmUwOWRmMTFlN2UzMTYxNDQ4Mw) Password: V7ms
+
 - From Alilang
-    
-	1. Open Alilang.
-	
-	2. On the left navigation bar, choose **Management**.
-	
-	3. On the right page, click **Office Software Management**.
-    
-	4. On the search bar, put **VirtualBox**.
-	
-	5. Click **Download**.
+
+1. Open Alilang.
+
+2. On the left navigation bar, choose **Management**.
+
+3. On the right page, click **Office Software Management**.
+
+4. On the search bar, put **VirtualBox**.
+
+5. Click **Download**.
 
 ####To Install VirtualBox
 
@@ -52,7 +52,7 @@ Practice the following steps:
 
 7. Click **Install**.
 
-  **Note:** when installing VirtualBox, a box of Oracle Corporation shows. Click **Install** .
+**Note:** when installing VirtualBox, a box of Oracle Corporation shows. Click **Install** .
 
 8. After installing completes, click **Finish**.
 
@@ -97,10 +97,10 @@ Practice the following steps:
 
 10. Add file path and choose the UbuntuPouch you downloaded.
 
-11.Click **Open**.
+11. Click **Open**.
 
 12. Click **Create**.
- 
+
 ## Steps: to create a pouchcontainer instance
 
 After meet the prerequisite, practice the following steps:
@@ -115,7 +115,7 @@ After meet the prerequisite, practice the following steps:
 
 5. Put `1234566` and press enter.
 
-  **Note:** If it does notjump to root account fails, reset your password and the command is `sudo passwd root`. Put your password twice.
+**Note:** If it does notjump to root account fails, reset your password and the command is `sudo passwd root`. Put your password twice.
 
 6. Put `ping www.alibaba-inc.com` and press enter, check if the network works.
 
@@ -133,7 +133,7 @@ After meet the prerequisite, practice the following steps:
 
 13. Put `ps -ef | grep pouch` and press enter, check if the pouch starts.
 
-  **Note:** If pouch fails, put `systemctl start pouch` and press enter.
+**Note:** If pouch fails, put `systemctl start pouch` and press enter.
 
 14. Put `Pouch run -t -d busybox sh` and press enter to start a busybox basic container.
 
