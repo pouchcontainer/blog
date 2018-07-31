@@ -4,6 +4,7 @@
 PouchContainer是一款由阿里巴巴开源的高效、轻量的企业级富容器引擎技术，具有隔离性强、可移植性高、资源占用少的特性。
 
 PouchContainer 是企业级的容器方案，故只支持 Linux 操作系统，故需要使用虚拟机才能做到本地运行和测试。
+
 ## VirtualBox 的安装及镜像导入
 - VirtualBox 安装包可通过[官网](https://www.virtualbox.org/wiki/Downloads)或【阿里郎】中的**办公软件管理**进行下载
 ![](https://i.loli.net/2018/07/30/5b5ed5e30c753.png)
@@ -24,8 +25,42 @@ PouchContainer 是企业级的容器方案，故只支持 Linux 操作系统，�
 
 ![](https://i.loli.net/2018/07/30/5b5ed8d04536f.png)
 
-### 服务启动步骤
-1. 启动创建好的实例，在登录阶段使用【账号：pouch / 密码：123456】进行登录
+## PouchContainer 的安装
+### 前置要求
+1. PouchContainer 支持 LXCFS 以提供强大的隔离，所以你首先需要安装 LXCFS。默认情况下，我们启用LZXCFS。
+``` bash
+sudo apt-get install lxcfs
+```
+2. 安装必要的包来允许`apt`可通过 HTTPS 使用一个仓库
+``` bash
+sudo apt-get install curl apt-transport-https ca-certificates software-properties-common
+```
+### 安装
+1. 从阿里云镜像添加 PouchContainer 的官方GPG密钥
+``` bash
+curl -fsSL http://mirrors.aliyun.com/opsx/pouch/linux/debian/opsx@service.alibaba.com.gpg.key | sudo apt-key add -
+```
+通过`fingerprint`验证你是否已获得正确的密钥
+``` bash
+apt-key fingerprint BE2F475F
+```
+
+![](https://i.loli.net/2018/07/31/5b5fd27d16c00.png)
+2. Set up the PouchContainer repository
+当首次获取 PouchContainer 的仓库时，一般首选`stable`的仓库。如需要使用`test`版本的仓库，则将下面的命令中的`stable`改成`test`即可。
+``` bash
+sudo add-apt-repository "deb http://mirrors.aliyun.com/opsx/pouch/linux/debian/ pouch stable"
+```
+
+3. 安装 PouchContainer
+``` bash
+sudo apt-get update
+sudo apt-get install pouch
+```
+至此，你已经成功安装了 PouchContainer。
+
+## 服务启动步骤
+1. 开启虚拟机实例，并登录
 
 ![](https://i.loli.net/2018/07/30/5b5eda998850b.png)
 2. 切换至 root 用户
@@ -39,6 +74,8 @@ ping www.alibaba-inc.com
 4. 启动 pouch 服务
 ``` bash
 systemctl start pouch
+# 或使用以下命令
+# sudo service pouch start
 ```
 5. 启动一个 busybox 基础容器，会生成一个key
 ``` bash
@@ -54,7 +91,7 @@ pouch exec -it {ID}
 
 ![](https://i.loli.net/2018/07/30/5b5edd8c3f50f.png)
 
-### 开发环境的配置
+## 开发环境的配置
 体验版镜像中已经包含的工具有：vim、make、git、go等基本工具，用户无需在配置。其中 pouch 的源码路径位于 /root/gopath/src/github.com/alibaba/pouch 。
 
 - 对于习惯 Vim 开发的同学，可直接在虚拟机中进行开发（需将 pouch 目录下的文件替换为自己 repo 中 fork 的项目文件）。
