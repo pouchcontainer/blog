@@ -3,7 +3,7 @@
 #### Download VirtualBox from ALILANG-Manager-Software Download, default version is 5.2.12 ####
 ### 2.Download the virtual machine backup CentOS of the development environment  ###
 ### 3.install CentOS in virtualBox###
-####3.1Open VirtualBox, Click on New->Customize VM name->Choose the OS type【Linux】and version【Linus 2.6/3.x/4.x (64-bit)】-> Click on Next； ####
+#### 3.1Open VirtualBox, Click on New->Customize VM name->Choose the OS type【Linux】and version【Linus 2.6/3.x/4.x (64-bit)】-> Click on Next； ####
 ![avatar](https://img.alicdn.com/tfs/TB1ikQpHHGYBuNjy0FoXXciBFXa-802-461.bmp)
 #### 3.2Choose 【1024M】-> Click on Next； ####
 ![avatar](https://img.alicdn.com/tfs/TB1RUubaO6guuRjy1XdXXaAwpXa-364-254.png)
