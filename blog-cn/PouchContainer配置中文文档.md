@@ -22,46 +22,101 @@ PouchContainer是阿里巴巴集团为了促进容器技术（container）的发
   git clone https://github.com/<your_github_username>/pouch.git
   ```
 
+## 创建并启动Ubuntu虚拟机
+
+* 安装VirtualBox。使用<阿里郎>--<管家>--<办公软件管理>安装，默认版本为5.2.12。钉盘链接：
+  * Mac版本：<https://space.dingtalk.com/s/gwHOABma4QLOGlgkPQPaACBiMzk5ZWRjZTAyOGI0MTBkOGRkNTRjYzNkN2Q1NTFjOA> ，密码：p5Sb
+  * Windows版本：<https://space.dingtalk.com/s/gwHOABmLzwLOGlgkPQPaACBhNzNjYjI5NTYxMzQ0NmUwOWRmMTFlN2UzMTYxNDQ4Mw> ，密码：V7ms
+* 下载开发环境的虚拟机备份`ubuntu.vdi`（钉群群文件下载）。
+* 打开VirtualBox，用刚刚下载的已有虚拟硬盘文件创建新的Ubuntu虚拟机，内存选择1024M。
+* 启动新建实例，等待进入到登录阶段。用户名为`pouch`，密码为`123456`。
+
+## 虚拟机安装PouchContainer
+
+在Ubuntu上安装PouchContainer需要Ubuntu版本为16.04。其他的版本目前还未被测试和支持。PouchContainer与Docker冲突，所以在安装PouchContainer之前，你需要移除本机的Docker。
+
+* 移除本机Docker。
+
+  ```bash
+  sudo apt-get remove docker
+  ```
+
+* 安装LXCFS，保证PouchContainer的强隔离性。LXCFS在Ubuntu上被默认安装。
+
+  ```bash
+  sudo apt-get install lxcfs
+  ```
+
+* 安装包以允许`apt`通过`HTTPS`来使用一个repository。
+
+  ```bash
+  sudo apt-get install curl apt-transport-https ca-certificates software-properties-common
+  ```
+
+* 添加PouchContainer官方GPG密钥。
+
+  ```bash
+  curl -fsSL http://mirrors.aliyun.com/opsx/pouch/linux/debian/opsx@service.alibaba.com.gpg.key | sudo apt-key add -
+  ```
+
+  通过搜索fingerprint的最后8个字符，确认你现在拥有带有fingerprint为`F443 EDD0 4A58 7E8B F645 9C40 CF68 F84A BE2F 475F`的密钥。
+
+  ```bash
+  $ apt-key fingerprint BE2F475F
+  pub   4096R/BE2F475F 2018-02-28
+        Key fingerprint = F443 EDD0 4A58 7E8B F645  9C40 CF68 F84A BE2F 475F
+  uid                  opsx-admin <opsx@service.alibaba.com>
+  ```
+
+* 创建PouchContainer的repository。
+
+  在你在一个全新的host machine上第一次安装PouchContainer之前，你要首先创建一个PouchContainer的repository。默认为`stable ` repository。如果要添加`test` repository，在以下命令的`stable`之后加上`test`即可。在此之后，你可以从这个repository里安装和更新PouchContainer。
+
+  ```bash
+  sudo add-apt-repository "deb http://mirrors.aliyun.com/opsx/pouch/linux/debian/ pouch stable"
+  ```
+
+* 安装最新版本的PouchContainer。
+
+  ```bash
+  # update the apt package index
+  sudo apt-get update
+  sudo apt-get install pouch
+  ```
+
+  安装PouchContainer之后，`pouch`组被创建，但组里没有用户。
+
 ## 虚拟机启动PouchContainer
 
-* 创建并启动虚拟机。
-
-  * 安装VirtualBox。使用<阿里郎>--<管家>--<办公软件管理>安装，默认版本为5.2.12。钉盘链接：
-    * Mac版本：<https://space.dingtalk.com/s/gwHOABma4QLOGlgkPQPaACBiMzk5ZWRjZTAyOGI0MTBkOGRkNTRjYzNkN2Q1NTFjOA> ，密码：p5Sb
-    * Windows版本：<https://space.dingtalk.com/s/gwHOABmLzwLOGlgkPQPaACBhNzNjYjI5NTYxMzQ0NmUwOWRmMTFlN2UzMTYxNDQ4Mw> ，密码：V7ms
-  * 下载开发环境的虚拟机备份（钉群群文件下载）。
-  * 打开VirtualBox，用刚刚下载的已有虚拟硬盘文件创建新的Ubuntu虚拟机，内存选择1024M。
-  * 启动新建实例，等待进入到登录阶段。用户名为`pouch`，密码为`123456`。
-
-* 在Github中clone pouch源码到虚拟机（步骤见上一部分）。
-
-* 检查网络是否正常。
+* 启动PouchContainer。
 
   ```bash
-  ping www.alibaba-inc.com
+  sudo service pouch start
   ```
 
-* 启动pouch服务（默认开机启动）。
+  现在，你可以pull一个镜像并运行PouchContainer的容器。以`busybox`为例。
+
+  * 启动一个busybox基础容器。
+
+    ```bash
+    sudo su
+    pouch pull reg.docker.alibaba-inc.com/busybox:latest
+    pouch run -t -d busybox sh
+    ```
+
+  * 登入启动的容器：
+
+    ```bash
+    pouch exec -it {ID} sh  # ID is the first 6 digits of the output of the last command
+    ```
+
+    此时，我们已经成功进入到这个container的终端。
+
+* 关闭PouchContainer。
 
   ```bash
-  systemctl start pouch
+  sudo service pouch stop
   ```
-
-* 启动一个busybox基础容器（先切换到root用户）。
-
-  ```bash
-  sudo su
-  pouch run -t -d busybox sh
-  ```
-
-* 登入启动的容器：
-
-  ```bash
-  root@ubuntu:/home/pouch$ pouch exec -it {ID} sh  # ID is the first 6 digits of the output of the last command
-  / # 
-  ```
-
-  此时，我们已经成功进入到这个container的终端。
 
 ## 配置共享文件夹（推荐）
 

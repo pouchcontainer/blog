@@ -22,47 +22,103 @@ PouchContainer is an open-source project created by Alibaba Group to promote the
   git clone https://github.com/<your_github_username>/pouch.git
   ```
 
+## Create and Start a Ubuntu Virtual Machine
+
+- Install VirtualBox. Use Alilang--Manager--Software Download to install, the default version is 5.2.12. Links to DingPan are listed below:
+  - Mac Version: <https://space.dingtalk.com/s/gwHOABma4QLOGlgkPQPaACBiMzk5ZWRjZTAyOGI0MTBkOGRkNTRjYzNkN2Q1NTFjOA>. Password: p5Sb
+  - Windows Version: <https://space.dingtalk.com/s/gwHOABmLzwLOGlgkPQPaACBhNzNjYjI5NTYxMzQ0NmUwOWRmMTFlN2UzMTYxNDQ4Mw>. Password: V7ms
+- Download the `.vdi` file for VM from Group Chat in Dingding.
+- Open VirtualBox, create a new Ubuntu Virtual Machine by the `.vdi` file you just downloaded. Choose 1024M for memory.
+- Start the new VM, wait to login. Username is `pouch`, password is `123456`.
+
+## Install PouchContainer in VM
+
+To install PouchContainer, you need a maintained version of Ubuntu 16.04 (Xenial LTS). Archived versions aren't supported or tested.
+
+PouchContainer is conflict with Docker, so you must uninstall Docker before installing PouchContainer.
+
+- Remove Docker.
+
+  ```bash
+  sudo apt-get remove docker
+  ```
+
+- Install LXCFS. PouchContainer supports LXCFS to provide strong isolation. By default, LXCFS is enabled.
+
+  ```bash
+  sudo apt-get install lxcfs
+  ```
+
+- Install packages to allow `apt` to use a repository over `HTTPS`.
+
+  ```bash
+  sudo apt-get install curl apt-transport-https ca-certificates software-properties-common
+  ```
+
+- Add PouchContainer's official GPG key.
+
+  ```bash
+  curl -fsSL http://mirrors.aliyun.com/opsx/pouch/linux/debian/opsx@service.alibaba.com.gpg.key | sudo apt-key add -
+  ```
+
+  Verify that you now have the key with the fingerprint `F443 EDD0 4A58 7E8B F645 9C40 CF68 F84A BE2F 475F`, by searching for the last 8 characters of the fingerprint.
+
+  ```bash
+  $ apt-key fingerprint BE2F475F
+  pub   4096R/BE2F475F 2018-02-28
+        Key fingerprint = F443 EDD0 4A58 7E8B F645  9C40 CF68 F84A BE2F 475F
+  uid                  opsx-admin <opsx@service.alibaba.com>
+  ```
+
+- Set up the PouchContainer repository
+
+  Before you install PouchContainer for the first time on a new host machine, you need to set up the PouchContainer repository. We enabled `stabel` repository by default, you always need the `stable` repository. To add the `test`repository, add the word `test` after the word `stable` in the command line below. Afterward, you can install and update PouchContainer from the repository.
+
+  ```bash
+  sudo add-apt-repository "deb http://mirrors.aliyun.com/opsx/pouch/linux/debian/ pouch stable"
+  ```
+
+- Install the latest version of PouchContainer.
+
+  ```bash
+  # update the apt package index
+  sudo apt-get update
+  sudo apt-get install pouch
+  ```
+
+  After installing PouchContainer, the `pouch` group is created, but no users are added to the group.
+
 ## Start PouchContainer in VM
 
-- Create and start a Ubuntu Virtual Machine.
-
-  - Install VirtualBox. Use Alilang--Manager--Software Download to install, the default version is 5.2.12. Links to DingPan are listed below:
-    - Mac Version: <https://space.dingtalk.com/s/gwHOABma4QLOGlgkPQPaACBiMzk5ZWRjZTAyOGI0MTBkOGRkNTRjYzNkN2Q1NTFjOA>. Password: p5Sb
-    - Windows Version: <https://space.dingtalk.com/s/gwHOABmLzwLOGlgkPQPaACBhNzNjYjI5NTYxMzQ0NmUwOWRmMTFlN2UzMTYxNDQ4Mw>. Password: V7ms
-
-  - Download the `.vdi` file for VM from Group Chat in Dingding.
-  - Open VirtualBox, create a new Ubuntu Virtual Machine by the `.vdi` file you just downloaded. Choose 1024M for memory.
-  - Start the new VM, wait to login. Username is `pouch`, password is `123456`.
-
-- Clone pouch source code to VM (steps are listed in the previous section).
-
-- Check the internet.
+- Start PouchContainer。
 
   ```bash
-  ping www.alibaba-inc.com
+  sudo service pouch start
   ```
 
-- Start pouch service (default started when booting).
+  Afterwards, you can pull an image and run PouchContainer containers. Take `busybox` for example.
+
+  - Start a busybox container。
+
+    ```bash
+    sudo su
+    pouch pull reg.docker.alibaba-inc.com/busybox:latest
+    pouch run -t -d busybox sh
+    ```
+
+  - Login to the container：
+
+    ```bash
+    pouch exec -it {ID} sh  # ID is the first 6 digits of the output of the last command
+    ```
+
+    Right now, we have successfully access to the terminal of container.
+
+- Stop PouchContainer。
 
   ```bash
-  systemctl start pouch
+  sudo service pouch stop
   ```
-
-- Start a busybox container (switch to root user first).
-
-  ```bash
-  sudo su
-  pouch run -t -d busybox sh
-  ```
-
-- Access to the container just started.
-
-  ```bash
-  root@ubuntu:/home/pouch$ pouch exec -it {ID} sh  # ID is the first 6 digits of the output of the last command
-  / # 
-  ```
-
-  Currently, you have successfully access to the terminal of the container.
 
 ## Configure Shared Folders (Recommended)
 
