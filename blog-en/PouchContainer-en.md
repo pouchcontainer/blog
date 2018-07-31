@@ -18,21 +18,21 @@ Choose one of the following ways:
 
 - From Dingtalk Cloud
 	
-	MacVersion£º[Mac Download](https://space.dingtalk.com/s/gwHOABma4QLOGlgkPQPaACBiMzk5ZWRjZTAyOGI0MTBkOGRkNTRjYzNkN2Q1NTFjOA)    Password: p5Sb
+MacVersionÂ£Âº[Mac Download](https://space.dingtalk.com/s/gwHOABma4QLOGlgkPQPaACBiMzk5ZWRjZTAyOGI0MTBkOGRkNTRjYzNkN2Q1NTFjOA)    Password: p5Sb
 
-	Windows Version£º[Windows Download](https://space.dingtalk.com/s/gwHOABmLzwLOGlgkPQPaACBhNzNjYjI5NTYxMzQ0NmUwOWRmMTFlN2UzMTYxNDQ4Mw) Password: V7ms
+Windows VersionÂ£Âº[Windows Download](https://space.dingtalk.com/s/gwHOABmLzwLOGlgkPQPaACBhNzNjYjI5NTYxMzQ0NmUwOWRmMTFlN2UzMTYxNDQ4Mw) Password: V7ms
    
 - From Alilang
     
-	1. Open Alilang.
+1. Open Alilang.
 	
-	2. On the left navigation bar, choose **Management**.
+2. On the left navigation bar, choose **Management**.
 	
-	3. On the right page, click **Office Software Management**.
+3. On the right page, click **Office Software Management**.
     
-	4. On the search bar, put **VirtualBox**.
+4. On the search bar, put **VirtualBox**.
 	
-	5. Click **Download**.
+5. Click **Download**.
 
 ####To Install VirtualBox
 
