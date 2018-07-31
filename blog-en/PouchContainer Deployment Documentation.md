@@ -26,7 +26,7 @@ PouchContainer is an open-source project created by Alibaba Group to promote the
 
 - Create and start a Ubuntu Virtual Machine.
 
-  - Install VirtualBox. Use <Alilang>--<Manager>--<Software Download> to install, the default version is 5.2.12. Links to DingPan are listed below:
+  - Install VirtualBox. Use Alilang--Manager--Software Download to install, the default version is 5.2.12. Links to DingPan are listed below:
     - Mac Version: <https://space.dingtalk.com/s/gwHOABma4QLOGlgkPQPaACBiMzk5ZWRjZTAyOGI0MTBkOGRkNTRjYzNkN2Q1NTFjOA>. Password: p5Sb
     - Windows Version: <https://space.dingtalk.com/s/gwHOABmLzwLOGlgkPQPaACBhNzNjYjI5NTYxMzQ0NmUwOWRmMTFlN2UzMTYxNDQ4Mw>. Password: V7ms
 
@@ -104,7 +104,7 @@ Due to the poor operation experience in VirtualBox, some people who are accustom
 
 - Configure the shared folder in your host machine.
 
-  Close your VM and open VirtualBox. Click <Settings>--<Shared Folders>--<Add Shared Folders> of this VM. Choose the pouch path cloned from GitHub as the `Folder Path`, set "word" as the `Folder Name` (MENTION: `Folder Name` cannot be the same name as the pouch folder on your host). Click "Auto Mount" and "Make Permanent", and click "OK" to finish.
+  Close your VM and open VirtualBox. Click Settings--Shared Folders--Add Shared Folders of this VM. Choose the pouch path cloned from GitHub as the `Folder Path`, set "word" as the `Folder Name` (MENTION: `Folder Name` cannot be the same name as the pouch folder on your host). Click "Auto Mount" and "Make Permanent", and click "OK" to finish.
 
   ![image-20180730192513951](https://i.loli.net/2018/07/30/5b5f2cbce4f54.png)
 
@@ -141,7 +141,7 @@ Due to the poor operation experience in VirtualBox as well as the complicated st
 
 ### Configuration Steps (On Mac)
 
-- Open <Settings>--<Network>-<Advanced>--<Port Forwarding>. Create a new TCP protocol, set the `Host Port` as you want, and set the `Guest Port` as 22. Click "OK".
+- Open Settings--Network-Advanced--Port Forwarding. Create a new TCP protocol, set the `Host Port` as you want, and set the `Guest Port` as 22. Click "OK".
 
   ![image-20180730194345483](https://i.loli.net/2018/07/30/5b5f2cbc4a0d3.png)
 
