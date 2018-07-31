@@ -136,7 +136,7 @@ PouchContainer是一款由阿里巴巴开源的高效、轻量的企业级富容
 
    ![2018-07-30 9.01.19](https://raw.githubusercontent.com/YangLoong/blog/dev//img/2018-07-30-9.01.19.png)
 
-2. SecureCRT选择SessionManager点击**+** ->出现New Session Wizard->**continue**。
+2. SecureCRT选择SessionManager点击 **+** ->出现New Session Wizard->**continue**。
 
    ![2018-07-30 9.06.54](https://raw.githubusercontent.com/YangLoong/blog/dev//img/2018-07-30-9.06.54.png)
 
@@ -168,7 +168,7 @@ PouchContainer是一款由阿里巴巴开源的高效、轻量的企业级富容
 
    ![2018-07-30 10.47.03](https://raw.githubusercontent.com/YangLoong/blog/dev//img/2018-07-30-10.47.03.png)
 
-3. 配置Virtualbox，选择Devices->Insert Guest Additions CD imageshttps://raw.githubusercontent.com/YangLoong/blog/dev/. 然后虚拟机中配置Virtualbox相关内容
+3. 配置Virtualbox，选择Devices->Insert Guest Additions CD images... 然后虚拟机中配置Virtualbox相关内容
 
    ```shell
    sudo mount /dev/sr0 /media/cdrom

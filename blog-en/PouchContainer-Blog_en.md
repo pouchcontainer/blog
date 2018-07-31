@@ -169,7 +169,7 @@ Currently，PouchContainer supports two kinds of Linux Distribution: Ubuntu and 
 
    ![2018-07-30 10.47.03](https://raw.githubusercontent.com/YangLoong/blog/dev//img/2018-07-30-10.47.03.png)
 
-3. Configure Virtualbox, and choose Devices -> Insert Guest Additions CD imageshttps://raw.githubusercontent.com/YangLoong/blog/dev/. Then we configure the Virtualbox addition tool in the virtual machine.
+3. Configure Virtualbox, and choose Devices -> Insert Guest Additions CD images... Then we configure the Virtualbox addition tool in the virtual machine.
 
    ```shell
    sudo mount /dev/sr0 /media/cdrom
