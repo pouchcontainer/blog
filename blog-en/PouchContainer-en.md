@@ -97,7 +97,7 @@ Practice the following steps:
 
 10. Add file path and choose the UbuntuPouch you downloaded.
 
-11.Click **Open**.
+11. Click **Open**.
 
 12. Click **Create**.
  
