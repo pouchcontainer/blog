@@ -18,21 +18,21 @@ PouchContainer 是阿里巴巴集团开源的高效、轻量级企业级富容�
 
 - 钉盘下载
 	
-	Mac 版本：[Mac Download](https://space.dingtalk.com/s/gwHOABma4QLOGlgkPQPaACBiMzk5ZWRjZTAyOGI0MTBkOGRkNTRjYzNkN2Q1NTFjOA)    密码: p5Sb
+Mac 版本：[Mac Download](https://space.dingtalk.com/s/gwHOABma4QLOGlgkPQPaACBiMzk5ZWRjZTAyOGI0MTBkOGRkNTRjYzNkN2Q1NTFjOA)    密码: p5Sb
 
-	Windows 版本：[Windows Download](https://space.dingtalk.com/s/gwHOABmLzwLOGlgkPQPaACBhNzNjYjI5NTYxMzQ0NmUwOWRmMTFlN2UzMTYxNDQ4Mw) 密码：V7ms
+Windows 版本：[Windows Download](https://space.dingtalk.com/s/gwHOABmLzwLOGlgkPQPaACBhNzNjYjI5NTYxMzQ0NmUwOWRmMTFlN2UzMTYxNDQ4Mw) 密码：V7ms
    
 - 阿里郎下载
     
-	1. 打开阿里郎；
+1. 打开阿里郎；
 	
-	2. 在左侧导航栏，选择**管家**；
+2. 在左侧导航栏，选择**管家**；
 	
-	3. 在右侧页面，选择**办公软件管理**；
+3. 在右侧页面，选择**办公软件管理**；
     
-	4. 在右上方的搜索栏, 输入 **VirtualBox**；
+4. 在右上方的搜索栏, 输入 **VirtualBox**；
 	
-	5. 单击 **安装**。
+5. 单击 **安装**。
 
 ####安装 VirtualBox
 
