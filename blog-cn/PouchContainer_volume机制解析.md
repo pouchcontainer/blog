@@ -49,7 +49,7 @@ type Driver interface {
 
 local volume是PouchContainer默认的volume类型，适合存储需要持久化的数据，它的生命周期独立于容器的生命周期。
 
-当你创建一个volume时，假如没有指定driver类型，则默认local为driver类型。local volume本质上，是由pouchd在/var/lib/pouch/volume目录下创建的一个子目录。相较于docker，PouchContainer的local volume拥有更多的实用特性，包括：
+local volume本质上，是由pouchd在/var/lib/pouch/volume目录下创建的一个子目录。相较于docker，PouchContainer的local volume拥有更多的实用特性，包括：
 
 * 指定挂载目录创建volume
 * 可以指定volume大小
@@ -129,5 +129,9 @@ bind mounts依赖于宿主机文件系统目录结构，而volume，在PouchCont
 
 ## 5. 总结
 
+<<<<<<< HEAD:blog-cn/PouchContainer volume机制解析.md
 本文介绍了PouchContainer的volume机制， volume机制主要是为了解决pouch容器数据持久化的问题，目前支持local,tmpfs,ceph三种driver，同时支持以volume plugin的形式对接更多的第三方存储。
+=======
+本文介绍了PouchContainer的volume机制， volume机制主要是为了解决pouch容器数据持久化的问题, PouchContainer目前支持local,tmpfs,ceph三种driver，同时支持以volume plugin的形式对接更多的第三方存储。
+>>>>>>> upstream/master:blog-cn/PouchContainer_volume机制解析.md
 
