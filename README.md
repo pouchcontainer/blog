@@ -6,8 +6,6 @@ This repository is storing all technology blogs about project [PouchContainer](h
 
 We have already posted the following blogs:
 
-*
-
 ## Blog Preference
 
 ## Contributing
